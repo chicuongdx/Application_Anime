@@ -30,26 +30,13 @@ namespace FinalProject
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Film));
-            this.lbName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbView = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnRate = new Guna.UI2.WinForms.Guna2Button();
             this.pctImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lbName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbName
-            // 
-            this.lbName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbName.BackColor = System.Drawing.Color.Transparent;
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbName.Location = new System.Drawing.Point(3, 150);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(35, 15);
-            this.lbName.TabIndex = 1;
-            this.lbName.Text = "Name";
             // 
             // guna2HtmlLabel1
             // 
@@ -114,22 +101,38 @@ namespace FinalProject
             this.pctImage.Location = new System.Drawing.Point(0, 0);
             this.pctImage.Name = "pctImage";
             this.pctImage.ShadowDecoration.Parent = this.pctImage;
-            this.pctImage.Size = new System.Drawing.Size(121, 147);
+            this.pctImage.Size = new System.Drawing.Size(116, 147);
             this.pctImage.TabIndex = 0;
             this.pctImage.TabStop = false;
+            this.pctImage.Click += new System.EventHandler(this.pctImage_Click);
+            // 
+            // lbName
+            // 
+            this.lbName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbName.Location = new System.Drawing.Point(0, 150);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(45, 15);
+            this.lbName.TabIndex = 5;
+            this.lbName.Text = "Name";
+            this.lbName.Click += new System.EventHandler(this.lbName_Click);
             // 
             // Film
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.lbName);
             this.Controls.Add(this.btnRate);
             this.Controls.Add(this.lbView);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.lbName);
             this.Controls.Add(this.pctImage);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "Film";
-            this.Size = new System.Drawing.Size(121, 185);
+            this.Size = new System.Drawing.Size(116, 185);
             ((System.ComponentModel.ISupportInitialize)(this.pctImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,9 +141,9 @@ namespace FinalProject
 
         #endregion
         private Guna.UI2.WinForms.Guna2Button btnRate;
-        public Guna.UI2.WinForms.Guna2HtmlLabel lbName;
         public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         public Guna.UI2.WinForms.Guna2HtmlLabel lbView;
         public Guna.UI2.WinForms.Guna2PictureBox pctImage;
+        public System.Windows.Forms.Label lbName;
     }
 }

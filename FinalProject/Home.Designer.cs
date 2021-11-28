@@ -30,54 +30,57 @@ namespace FinalProject
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            this.pnlTile = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlATle = new Guna.UI2.WinForms.Guna2Panel();
             this.pctIcon = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnlMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnStore = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFormat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnType = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.pctSearch = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pnlApp = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlHome = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlAnime = new Guna.UI2.WinForms.Guna2Panel();
             this.GpBoxRandom = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnRandom = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlSuggest = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.flownlListFilm = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pnlTile.SuspendLayout();
+            this.pnlApp = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlATle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctIcon)).BeginInit();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctSearch)).BeginInit();
-            this.pnlApp.SuspendLayout();
-            this.pnlHome.SuspendLayout();
+            this.pnlAnime.SuspendLayout();
             this.GpBoxRandom.SuspendLayout();
+            this.pnlApp.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlTile
+            // pnlATle
             // 
-            this.pnlTile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(37)))), ((int)(((byte)(23)))));
-            this.pnlTile.Controls.Add(this.pctIcon);
-            this.pnlTile.Controls.Add(this.guna2ControlBox3);
-            this.pnlTile.Controls.Add(this.guna2ControlBox2);
-            this.pnlTile.Controls.Add(this.guna2ControlBox1);
-            this.pnlTile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTile.Location = new System.Drawing.Point(0, 0);
-            this.pnlTile.Name = "pnlTile";
-            this.pnlTile.ShadowDecoration.Parent = this.pnlTile;
-            this.pnlTile.Size = new System.Drawing.Size(900, 31);
-            this.pnlTile.TabIndex = 0;
-            this.pnlTile.DoubleClick += new System.EventHandler(this.pnlTile_DoubleClick);
-            this.pnlTile.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTile_MouseMove);
+            this.pnlATle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(37)))), ((int)(((byte)(23)))));
+            this.pnlATle.Controls.Add(this.pctIcon);
+            this.pnlATle.Controls.Add(this.guna2ControlBox3);
+            this.pnlATle.Controls.Add(this.guna2ControlBox2);
+            this.pnlATle.Controls.Add(this.guna2ControlBox1);
+            this.pnlATle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlATle.Location = new System.Drawing.Point(0, 0);
+            this.pnlATle.Name = "pnlATle";
+            this.pnlATle.ShadowDecoration.Parent = this.pnlATle;
+            this.pnlATle.Size = new System.Drawing.Size(900, 31);
+            this.pnlATle.TabIndex = 0;
+            this.pnlATle.DoubleClick += new System.EventHandler(this.pnlTile_DoubleClick);
+            this.pnlATle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTile_MouseMove);
             // 
             // pctIcon
             // 
             this.pctIcon.BackColor = System.Drawing.Color.Transparent;
-            this.pctIcon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pctIcon.BackgroundImage")));
+            this.pctIcon.BackgroundImage = global::FinalProject.Properties.Resources.icon;
             this.pctIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pctIcon.Dock = System.Windows.Forms.DockStyle.Left;
             this.pctIcon.FillColor = System.Drawing.Color.Transparent;
             this.pctIcon.Image = ((System.Drawing.Image)(resources.GetObject("pctIcon.Image")));
             this.pctIcon.ImageRotate = 0F;
@@ -130,11 +133,13 @@ namespace FinalProject
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(114)))), ((int)(((byte)(100)))));
             this.pnlMenu.Controls.Add(this.btnStore);
+            this.pnlMenu.Controls.Add(this.btnFormat);
+            this.pnlMenu.Controls.Add(this.btnType);
             this.pnlMenu.Controls.Add(this.btnHome);
             this.pnlMenu.Controls.Add(this.pctSearch);
             this.pnlMenu.Controls.Add(this.txtSearch);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 31);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.ShadowDecoration.Parent = this.pnlMenu;
             this.pnlMenu.Size = new System.Drawing.Size(900, 57);
@@ -161,13 +166,66 @@ namespace FinalProject
             this.btnStore.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnStore.ForeColor = System.Drawing.Color.White;
             this.btnStore.HoverState.Parent = this.btnStore;
-            this.btnStore.Location = new System.Drawing.Point(503, 9);
+            this.btnStore.Location = new System.Drawing.Point(585, 9);
             this.btnStore.Name = "btnStore";
             this.btnStore.ShadowDecoration.Parent = this.btnStore;
             this.btnStore.Size = new System.Drawing.Size(111, 39);
             this.btnStore.TabIndex = 2;
             this.btnStore.Text = "Kho phim";
-            this.btnStore.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnFormat
+            // 
+            this.btnFormat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(114)))), ((int)(((byte)(100)))));
+            this.btnFormat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(69)))));
+            this.btnFormat.BorderRadius = 22;
+            this.btnFormat.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.btnFormat.BorderThickness = 2;
+            this.btnFormat.CheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnFormat.CheckedState.Parent = this.btnFormat;
+            this.btnFormat.CustomBorderColor = System.Drawing.Color.White;
+            this.btnFormat.CustomImages.Parent = this.btnFormat;
+            this.btnFormat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFormat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFormat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFormat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFormat.DisabledState.Parent = this.btnFormat;
+            this.btnFormat.FillColor = System.Drawing.Color.Transparent;
+            this.btnFormat.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnFormat.ForeColor = System.Drawing.Color.White;
+            this.btnFormat.HoverState.Parent = this.btnFormat;
+            this.btnFormat.Location = new System.Drawing.Point(117, 9);
+            this.btnFormat.Name = "btnFormat";
+            this.btnFormat.ShadowDecoration.Parent = this.btnFormat;
+            this.btnFormat.Size = new System.Drawing.Size(111, 39);
+            this.btnFormat.TabIndex = 2;
+            this.btnFormat.Text = "Dạng anime";
+            // 
+            // btnType
+            // 
+            this.btnType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(114)))), ((int)(((byte)(100)))));
+            this.btnType.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(69)))));
+            this.btnType.BorderRadius = 22;
+            this.btnType.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.btnType.BorderThickness = 2;
+            this.btnType.CheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnType.CheckedState.Parent = this.btnType;
+            this.btnType.CustomBorderColor = System.Drawing.Color.White;
+            this.btnType.CustomImages.Parent = this.btnType;
+            this.btnType.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnType.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnType.DisabledState.Parent = this.btnType;
+            this.btnType.FillColor = System.Drawing.Color.Transparent;
+            this.btnType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnType.ForeColor = System.Drawing.Color.White;
+            this.btnType.HoverState.Parent = this.btnType;
+            this.btnType.Location = new System.Drawing.Point(234, 9);
+            this.btnType.Name = "btnType";
+            this.btnType.ShadowDecoration.Parent = this.btnType;
+            this.btnType.Size = new System.Drawing.Size(111, 39);
+            this.btnType.TabIndex = 2;
+            this.btnType.Text = "Thể loại";
             // 
             // btnHome
             // 
@@ -204,7 +262,7 @@ namespace FinalProject
             this.pctSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pctSearch.FillColor = System.Drawing.Color.Transparent;
             this.pctSearch.ImageRotate = 0F;
-            this.pctSearch.Location = new System.Drawing.Point(620, 16);
+            this.pctSearch.Location = new System.Drawing.Point(702, 16);
             this.pctSearch.Name = "pctSearch";
             this.pctSearch.ShadowDecoration.Parent = this.pctSearch;
             this.pctSearch.Size = new System.Drawing.Size(41, 23);
@@ -226,39 +284,29 @@ namespace FinalProject
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(660, 16);
+            this.txtSearch.Location = new System.Drawing.Point(741, 16);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(200, 23);
+            this.txtSearch.Size = new System.Drawing.Size(156, 23);
             this.txtSearch.TabIndex = 0;
             // 
-            // pnlApp
+            // pnlAnime
             // 
-            this.pnlApp.Controls.Add(this.pnlHome);
-            this.pnlApp.Controls.Add(this.pnlMenu);
-            this.pnlApp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlApp.Location = new System.Drawing.Point(0, 31);
-            this.pnlApp.Name = "pnlApp";
-            this.pnlApp.ShadowDecoration.Parent = this.pnlApp;
-            this.pnlApp.Size = new System.Drawing.Size(900, 567);
-            this.pnlApp.TabIndex = 2;
-            // 
-            // pnlHome
-            // 
-            this.pnlHome.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlHome.Controls.Add(this.guna2HtmlLabel2);
-            this.pnlHome.Controls.Add(this.flownlListFilm);
-            this.pnlHome.Controls.Add(this.GpBoxRandom);
-            this.pnlHome.Controls.Add(this.pnlSuggest);
-            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHome.Location = new System.Drawing.Point(0, 57);
-            this.pnlHome.Name = "pnlHome";
-            this.pnlHome.ShadowDecoration.Parent = this.pnlHome;
-            this.pnlHome.Size = new System.Drawing.Size(900, 510);
-            this.pnlHome.TabIndex = 2;
+            this.pnlAnime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlAnime.Controls.Add(this.GpBoxRandom);
+            this.pnlAnime.Controls.Add(this.guna2HtmlLabel2);
+            this.pnlAnime.Controls.Add(this.pnlSuggest);
+            this.pnlAnime.Controls.Add(this.flownlListFilm);
+            this.pnlAnime.Location = new System.Drawing.Point(0, 85);
+            this.pnlAnime.Name = "pnlAnime";
+            this.pnlAnime.ShadowDecoration.Parent = this.pnlAnime;
+            this.pnlAnime.Size = new System.Drawing.Size(900, 513);
+            this.pnlAnime.TabIndex = 2;
             // 
             // GpBoxRandom
             // 
@@ -271,7 +319,7 @@ namespace FinalProject
             this.GpBoxRandom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
             this.GpBoxRandom.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.GpBoxRandom.ForeColor = System.Drawing.Color.White;
-            this.GpBoxRandom.Location = new System.Drawing.Point(607, 6);
+            this.GpBoxRandom.Location = new System.Drawing.Point(607, 9);
             this.GpBoxRandom.Name = "GpBoxRandom";
             this.GpBoxRandom.ShadowDecoration.Parent = this.GpBoxRandom;
             this.GpBoxRandom.Size = new System.Drawing.Size(290, 140);
@@ -313,27 +361,6 @@ namespace FinalProject
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Nếu bạn buồn phiền không biết xem gì hôm nay. Hãy để chúng tôi chọn cho bạn.";
             // 
-            // pnlSuggest
-            // 
-            this.pnlSuggest.BackColor = System.Drawing.Color.Transparent;
-            this.pnlSuggest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnlSuggest.Location = new System.Drawing.Point(1, -3);
-            this.pnlSuggest.Name = "pnlSuggest";
-            this.pnlSuggest.ShadowDecoration.Parent = this.pnlSuggest;
-            this.pnlSuggest.Size = new System.Drawing.Size(600, 224);
-            this.pnlSuggest.TabIndex = 0;
-            // 
-            // flownlListFilm
-            // 
-            this.flownlListFilm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flownlListFilm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
-            this.flownlListFilm.Location = new System.Drawing.Point(0, 242);
-            this.flownlListFilm.Name = "flownlListFilm";
-            this.flownlListFilm.Size = new System.Drawing.Size(900, 268);
-            this.flownlListFilm.TabIndex = 0;
-            // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -341,11 +368,44 @@ namespace FinalProject
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(152)))), ((int)(((byte)(152)))));
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(-1, 221);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(1, 270);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(112, 21);
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "Danh Sách Phim";
+            // 
+            // pnlSuggest
+            // 
+            this.pnlSuggest.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSuggest.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlSuggest.Location = new System.Drawing.Point(3, 11);
+            this.pnlSuggest.Name = "pnlSuggest";
+            this.pnlSuggest.ShadowDecoration.Parent = this.pnlSuggest;
+            this.pnlSuggest.Size = new System.Drawing.Size(578, 253);
+            this.pnlSuggest.TabIndex = 0;
+            // 
+            // flownlListFilm
+            // 
+            this.flownlListFilm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flownlListFilm.AutoScroll = true;
+            this.flownlListFilm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.flownlListFilm.Location = new System.Drawing.Point(0, 290);
+            this.flownlListFilm.Name = "flownlListFilm";
+            this.flownlListFilm.Size = new System.Drawing.Size(900, 223);
+            this.flownlListFilm.TabIndex = 0;
+            // 
+            // pnlApp
+            // 
+            this.pnlApp.Controls.Add(this.pnlMenu);
+            this.pnlApp.Controls.Add(this.pnlATle);
+            this.pnlApp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlApp.Location = new System.Drawing.Point(0, 0);
+            this.pnlApp.Name = "pnlApp";
+            this.pnlApp.ShadowDecoration.Parent = this.pnlApp;
+            this.pnlApp.Size = new System.Drawing.Size(900, 90);
+            this.pnlApp.TabIndex = 2;
             // 
             // Home
             // 
@@ -353,37 +413,36 @@ namespace FinalProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 598);
             this.Controls.Add(this.pnlApp);
-            this.Controls.Add(this.pnlTile);
+            this.Controls.Add(this.pnlAnime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Home";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Home_Load);
-            this.pnlTile.ResumeLayout(false);
+            this.pnlATle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctIcon)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctSearch)).EndInit();
-            this.pnlApp.ResumeLayout(false);
-            this.pnlHome.ResumeLayout(false);
-            this.pnlHome.PerformLayout();
+            this.pnlAnime.ResumeLayout(false);
+            this.pnlAnime.PerformLayout();
             this.GpBoxRandom.ResumeLayout(false);
+            this.pnlApp.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel pnlTile;
+        private Guna.UI2.WinForms.Guna2Panel pnlATle;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Panel pnlMenu;
         private Guna.UI2.WinForms.Guna2PictureBox pctIcon;
-        private Guna.UI2.WinForms.Guna2Panel pnlApp;
-        private Guna.UI2.WinForms.Guna2Panel pnlHome;
+        private Guna.UI2.WinForms.Guna2Panel pnlAnime;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2PictureBox pctSearch;
         private Guna.UI2.WinForms.Guna2Button btnHome;
@@ -394,5 +453,8 @@ namespace FinalProject
         private Guna.UI2.WinForms.Guna2GroupBox GpBoxRandom;
         private System.Windows.Forms.FlowLayoutPanel flownlListFilm;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2Button btnType;
+        private Guna.UI2.WinForms.Guna2Button btnFormat;
+        private Guna.UI2.WinForms.Guna2Panel pnlApp;
     }
 }

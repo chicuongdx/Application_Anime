@@ -14,6 +14,8 @@ namespace FinalProject
 {
     public partial class Home : Form
     {
+
+        private Form activeForm;
         public Home()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace FinalProject
         Size original;
         private void Home_Load(object sender, EventArgs e)
         {
-            original = this.Size;            
+            original = this.Size;
         }
         private void pnlTile_MouseMove(object sender, MouseEventArgs e)
         {
@@ -74,22 +76,49 @@ namespace FinalProject
 
         private void Load_Data(DataTable table)
         {
-            
             foreach(DataRow row in table.Rows)
             {
                 Film film = new Film();
                 film.lbName.Text = row["Name"].ToString();
-                film.lbView.Text = "0";
+                film.lbView.Text = row["View"].ToString();
                 string path = Application.StartupPath + "\\Video\\" + row["Name"].ToString() + "\\image.jfif";
                 Image img = Image.FromFile(path);
                 film.pctImage.BackgroundImage = img;
                 flownlListFilm.Controls.Add(film);
+
+                film.PictureBoxClick += Film_Click;
             }
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.pnlAnime.Controls.Add(childForm);
+            this.pnlAnime.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void Film_Click(object sender, EventArgs e)
+        {
+            Film film = (Film)sender;
+            string s = "Name='" + film.lbName.Text + "'";
+            DataRow row = DataFrame.DataSet.Select(s)[0];
+            OpenChildForm(new Describe(row));
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             btnHome.BringToFront();
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
         }
     }
 }

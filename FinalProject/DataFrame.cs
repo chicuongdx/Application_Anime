@@ -39,6 +39,8 @@ namespace FinalProject
             myTable.Columns.Add("NumEp", typeof(int));
             ///myTable.Columns.Add("Description", typeof(string));
             myTable.Columns.Add("NumMovie", typeof(int));
+            myTable.Columns.Add("View", typeof(int));
+            myTable.Columns.Add("Year", typeof(int));
 
             for (int i = 2; i <= rows; i++)
             {
@@ -48,6 +50,8 @@ namespace FinalProject
                     myNewRow["Name"] = Convert.ToString(excelRange.Cells[i, 1].Value2); //string
                     myNewRow["NumEp"] = Convert.ToInt32(excelRange.Cells[i, 2].Value2); //int
                     myNewRow["NumMovie"] = Convert.ToInt32(excelRange.Cells[i, 3].Value2); //int
+                    myNewRow["View"] = Convert.ToInt32(excelRange.Cells[i, 4].Value2); //int
+                    myNewRow["Year"] = Convert.ToInt32(excelRange.Cells[i, 5].Value2); //Datetime
 
                     myTable.Rows.Add(myNewRow);
                 }
