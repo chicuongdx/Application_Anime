@@ -51,6 +51,9 @@
     <Reference Include="Guna.UI2, Version=2.0.2.5, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.5\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,8 +65,20 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="taglib-sharp, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\taglib-sharp-netstandard2.0.2.1.0\lib\netstandard2.0\taglib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="YoutubeSearch, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YoutubeSearch.dll.1.1\lib\YoutubeSearch.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browser.Designer.cs">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </Compile>
     <Compile Include="cv2.cs" />
     <Compile Include="DataFrame.cs" />
     <Compile Include="Describe.cs">
@@ -110,6 +125,16 @@
     <Compile Include="WatchFilm.Designer.cs">
       <DependentUpon>WatchFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Youtube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Youtube.Designer.cs">
+      <DependentUpon>Youtube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoutubeVideo.cs" />
+    <EmbeddedResource Include="Browser.resx">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Describe.resx">
       <DependentUpon>Describe.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,7 +160,11 @@
     <EmbeddedResource Include="WatchFilm.resx">
       <DependentUpon>WatchFilm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Youtube.resx">
+      <DependentUpon>Youtube.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\YoutubeVideo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

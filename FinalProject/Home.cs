@@ -141,10 +141,12 @@ namespace FinalProject
             try
             {
                 img = cv2.resize_width(cv2.imread(Application.StartupPath + "\\View\\" + drow["Name"].ToString() + "\\preview.jfif"), pnlPreview.Width);
+                lbName.Text = film.lbName.Text;
             }
             catch
             {
                 img = cv2.resize_width(cv2.imread(Application.StartupPath + "\\View\\" + drow["Name"].ToString() + "\\image.jfif"), pnlPreview.Width);
+                lbName.Text = film.lbName.Text;
             }
             pnlPreview.BackgroundImage = img;
         }
@@ -153,6 +155,11 @@ namespace FinalProject
         private void btnStore_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Store());
+        }
+
+        private void btnYoutube_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Browser());
         }
     }
 }

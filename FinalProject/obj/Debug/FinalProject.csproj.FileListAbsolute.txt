@@ -36,6 +36,11 @@ D:\Workspace\Anime-Winform\FinalProject\obj\Debug\FinalProject.Store.resources
 D:\Workspace\Anime-Winform\FinalProject\obj\Debug\FinalProject.WatchFilm.resources
 D:\Workspace\Anime-Winform\FinalProject\obj\Debug\FinalProject.csproj.GenerateResource.cache
 D:\Workspace\Anime-Winform\FinalProject\obj\Debug\FinalProject.csproj.CoreCompileInputs.cache
-D:\Workspace\Anime-Winform\FinalProject\obj\Debug\FinalProject.csproj.CopyComplete
 D:\Workspace\Anime-Winform\FinalProject\obj\Debug\FinalProject.exe
 D:\Workspace\Anime-Winform\FinalProject\obj\Debug\FinalProject.pdb
+D:\Workspace\Anime-Winform\FinalProject\obj\Debug\FinalProject.Youtube.resources
+D:\Workspace\Anime-Winform\FinalProject\bin\Debug\YoutubeSearch.dll
+D:\Workspace\Anime-Winform\FinalProject\bin\Debug\Newtonsoft.Json.dll
+D:\Workspace\Anime-Winform\FinalProject\bin\Debug\taglib-sharp.dll
+D:\Workspace\Anime-Winform\FinalProject\bin\Debug\Newtonsoft.Json.xml
+D:\Workspace\Anime-Winform\FinalProject\obj\Debug\FinalProject.Browser.resources
