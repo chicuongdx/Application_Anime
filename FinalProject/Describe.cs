@@ -26,23 +26,36 @@ namespace FinalProject
             Load_Data();
         }
 
-        private Image Reszie_Image(Image img, Size size)
-        {
-            Bitmap bm = new Bitmap(img, size);
-            return (Image)bm;
-        }
+        
         private void Load_Image()
         {
-            Image img = Image.FromFile(Application.StartupPath + "\\Video\\" + row["Name"].ToString() + "\\image.jfif");
-            Image resized = Reszie_Image(img, new Size(pctImage.Width, pctImage.Height));
+            Image preview;
+            Image img = cv2.imread(Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\image.jfif");
+            try
+            {
+                preview = cv2.imread(Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\preview.jfif");
+            }catch
+            {
+                preview = cv2.imread(Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\image.jfif");
+            }
+            preview = cv2.resize_width(preview, pnlPreview.Width);
+            pnlPreview.BackgroundImage = preview;
+            Image resized = cv2.resize(img, new Size(pctImage.Width, pctImage.Height));
             pctImage.Image = resized;
         }
         private void Load_Name()
         {
             lbName.Text = row["Name"].ToString();
-            string path = Application.StartupPath + "\\Video\\" + row["Name"].ToString() + "\\described.txt";
+            string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Describe.txt";
             string s = File.ReadAllText(path);
-            richTxtDescribe.Text = s;
+            lbDescribe.Text = s;
+
+            lbType.Text = row["Type"].ToString();
+            lbDirector.Text = row["Director"].ToString();
+            lbStudio.Text = row["Studio"].ToString();
+            lbSeason.Text = row["Season"].ToString();
+            lbView.Text = row["View"].ToString();
+
         }
         private void Load_Data()
         {
@@ -68,6 +81,17 @@ namespace FinalProject
         {
             WatchFilm showFilm = new WatchFilm(row);
             OpenChildForm(showFilm);
+        }
+
+        //random film
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            int limit = DataFrame.DataSet.Rows.Count;
+            Random random = new Random();
+
+            int idx = random.Next(limit);
+            DataRow random_row = DataFrame.DataSet.Rows[idx];
+            OpenChildForm(new Describe(random_row));
         }
     }
 }

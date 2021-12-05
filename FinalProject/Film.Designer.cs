@@ -105,6 +105,7 @@ namespace FinalProject
             this.pctImage.TabIndex = 0;
             this.pctImage.TabStop = false;
             this.pctImage.Click += new System.EventHandler(this.pctImage_Click);
+            this.pctImage.MouseHover += new System.EventHandler(this.pctImage_MouseHover);
             // 
             // lbName
             // 
@@ -119,6 +120,7 @@ namespace FinalProject
             this.lbName.TabIndex = 5;
             this.lbName.Text = "Name";
             this.lbName.Click += new System.EventHandler(this.lbName_Click);
+            this.lbName.MouseHover += new System.EventHandler(this.lbName_MouseHover);
             // 
             // Film
             // 

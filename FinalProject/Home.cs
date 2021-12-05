@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ExcelApp = Microsoft.Office.Interop.Excel;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace FinalProject
 {
@@ -32,6 +33,7 @@ namespace FinalProject
         private void Home_Load(object sender, EventArgs e)
         {
             original = this.Size;
+
         }
         private void pnlTile_MouseMove(object sender, MouseEventArgs e)
         {
@@ -76,17 +78,13 @@ namespace FinalProject
 
         private void Load_Data(DataTable table)
         {
-            foreach(DataRow row in table.Rows)
+            foreach (DataRow row in table.Rows)
             {
-                Film film = new Film();
-                film.lbName.Text = row["Name"].ToString();
-                film.lbView.Text = row["View"].ToString();
-                string path = Application.StartupPath + "\\Video\\" + row["Name"].ToString() + "\\image.jfif";
-                Image img = Image.FromFile(path);
-                film.pctImage.BackgroundImage = img;
+                Film film = cv2.filmread(row);
                 flownlListFilm.Controls.Add(film);
 
                 film.PictureBoxClick += Film_Click;
+                film.pctMouseHover += Film_MouseHover;
             }
         }
 
@@ -119,6 +117,42 @@ namespace FinalProject
             {
                 activeForm.Close();
             }
+        }
+
+        //random film
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            int limit = DataFrame.DataSet.Rows.Count;
+            Random random = new Random();
+
+            int idx = random.Next(limit);
+            DataRow random_row = DataFrame.DataSet.Rows[idx];
+            OpenChildForm(new Describe(random_row));
+        }
+
+        //preview
+        private void Film_MouseHover(object sender, EventArgs e)
+        {
+            Film film = (Film)sender;
+            string s = "Name='" + film.lbName.Text + "'";
+            DataRow drow = DataFrame.DataSet.Select(s)[0];
+
+            Image img;
+            try
+            {
+                img = cv2.resize_width(cv2.imread(Application.StartupPath + "\\View\\" + drow["Name"].ToString() + "\\preview.jfif"), pnlPreview.Width);
+            }
+            catch
+            {
+                img = cv2.resize_width(cv2.imread(Application.StartupPath + "\\View\\" + drow["Name"].ToString() + "\\image.jfif"), pnlPreview.Width);
+            }
+            pnlPreview.BackgroundImage = img;
+        }
+
+        //store film
+        private void btnStore_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Store());
         }
     }
 }

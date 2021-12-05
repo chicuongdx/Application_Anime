@@ -64,13 +64,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnimeSub.cs">
+    <Compile Include="cv2.cs" />
+    <Compile Include="DataFrame.cs" />
+    <Compile Include="Describe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnimeSub.Designer.cs">
-      <DependentUpon>AnimeSub.cs</DependentUpon>
+    <Compile Include="Describe.Designer.cs">
+      <DependentUpon>Describe.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataFrame.cs" />
     <Compile Include="Film.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,14 +92,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Store.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store.Designer.cs">
+      <DependentUpon>Store.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AnimeSub.resx">
-      <DependentUpon>AnimeSub.cs</DependentUpon>
+    <Compile Include="WatchFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WatchFilm.Designer.cs">
+      <DependentUpon>WatchFilm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Describe.resx">
+      <DependentUpon>Describe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Film.resx">
       <DependentUpon>Film.cs</DependentUpon>
@@ -116,6 +129,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Store.resx">
+      <DependentUpon>Store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WatchFilm.resx">
+      <DependentUpon>WatchFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -199,6 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,6 +17,16 @@ namespace FinalProject
         {
             InitializeComponent();
             row = dr;
+            string path = "";
+            if (Convert.ToInt32(row["NumEp"]) != 0)
+            {
+                path = Application.StartupPath + "\\Video\\" + row["Name"].ToString() + "\\1.mp4";
+            }
+            else
+            {
+                path = Application.StartupPath + "\\Video\\" + row["Name"].ToString() + "\\Movie 1.mp4";
+            }
+            WMP.URL = path;
         }
 
         private void WatchFilm_Load(object sender, EventArgs e)

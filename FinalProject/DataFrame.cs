@@ -36,11 +36,15 @@ namespace FinalProject
             //Set DataTable Name and Columns Name
             myTable = new DataTable("MyDataTable");
             myTable.Columns.Add("Name", typeof(string));
+            myTable.Columns.Add("NameSort", typeof(string));
+            myTable.Columns.Add("NameOther", typeof(string));
             myTable.Columns.Add("NumEp", typeof(int));
-            ///myTable.Columns.Add("Description", typeof(string));
             myTable.Columns.Add("NumMovie", typeof(int));
             myTable.Columns.Add("View", typeof(int));
-            myTable.Columns.Add("Year", typeof(int));
+            myTable.Columns.Add("Type", typeof(string));
+            myTable.Columns.Add("Studio", typeof(string));
+            myTable.Columns.Add("Season", typeof(string));
+            myTable.Columns.Add("Director", typeof(string));
 
             for (int i = 2; i <= rows; i++)
             {
@@ -48,10 +52,19 @@ namespace FinalProject
                 {
                     myNewRow = myTable.NewRow();
                     myNewRow["Name"] = Convert.ToString(excelRange.Cells[i, 1].Value2); //string
-                    myNewRow["NumEp"] = Convert.ToInt32(excelRange.Cells[i, 2].Value2); //int
-                    myNewRow["NumMovie"] = Convert.ToInt32(excelRange.Cells[i, 3].Value2); //int
-                    myNewRow["View"] = Convert.ToInt32(excelRange.Cells[i, 4].Value2); //int
-                    myNewRow["Year"] = Convert.ToInt32(excelRange.Cells[i, 5].Value2); //Datetime
+                    myNewRow["NameSort"] = Convert.ToString(excelRange.Cells[i, 2].Value2); //string
+                    myNewRow["NameOther"] = Convert.ToString(excelRange.Cells[i, 3].Value2);
+                    myNewRow["NumEp"] = Convert.ToInt32(excelRange.Cells[i, 4].Value2); //int
+                    myNewRow["NumMovie"] = Convert.ToInt32(excelRange.Cells[i, 5].Value2); //int
+                    myNewRow["View"] = Convert.ToInt32(excelRange.Cells[i, 6].Value2); //int
+                    myNewRow["Type"] = Convert.ToString(excelRange.Cells[i, 7].Value2); //
+                    myNewRow["Studio"] = Convert.ToString(excelRange.Cells[i, 8].Value2); //
+                    myNewRow["Season"] = Convert.ToString(excelRange.Cells[i, 9].Value2); //
+                    try
+                    {
+                        myNewRow["Director"] = Convert.ToInt32(excelRange.Cells[i, 10].Value2); //
+                    }
+                    catch { myNewRow["Director"] = ""; }
 
                     myTable.Rows.Add(myNewRow);
                 }
@@ -63,6 +76,33 @@ namespace FinalProject
             return myTable;
         }
         public static DataTable DataSet = ReadExcel();
+
+
+        //get list from string
+        private static List<string> selectionFilterFilm(DataTable table, string nameCol)
+        {
+            List<string> result = new List<string>();
+            foreach (DataRow row in table.Rows)
+            {
+                string[] type = row[nameCol].ToString().Split(',');
+                foreach (string s in type)
+                {
+                    if (s[0] == ' ')
+                    {
+                        s.Remove(0, 1);
+                    }
+                    if (!result.Contains(s))
+                    {
+                        result.Add(s);
+                    }
+                }
+            }
+
+            return result;
+        }
+        //static string[] select = { "Type", "Studio" };
+        //public static List<string> Type = selectionFilterFilm(DataSet, select[0]);
+        //public static List<string> Studio = selectionFilterFilm(DataSet, select[1]);
 
     }
 }
