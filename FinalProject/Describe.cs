@@ -14,7 +14,6 @@ namespace FinalProject
     public partial class Describe : Form
     {
         DataRow row;
-        private Form activeForm;
         public Describe(DataRow dr)
         {
             InitializeComponent();
@@ -64,20 +63,6 @@ namespace FinalProject
             Load_Name();
         }
 
-        public void OpenChildForm(Form childForm)
-        {
-            if (activeForm != null)
-                activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            this.Controls.Add(childForm);
-            this.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
         private void lbWatch_Click(object sender, EventArgs e)
         {
             int idx = DataFrame.DataSet.Rows.IndexOf(row);
@@ -86,7 +71,7 @@ namespace FinalProject
             DataFrame.DataSet.Rows[idx]["View"] = view;
 
             WatchFilm showFilm = new WatchFilm(row);
-            OpenChildForm(showFilm);
+            showFilm.Show();
         }
     }
 }

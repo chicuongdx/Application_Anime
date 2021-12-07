@@ -63,7 +63,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlApp = new Guna.UI2.WinForms.Guna2Panel();
             this.pctIcon = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnMuse = new Guna.UI2.WinForms.Guna2Button();
             this.pnlATle.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).BeginInit();
@@ -137,7 +136,6 @@
             this.pnlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(114)))), ((int)(((byte)(100)))));
-            this.pnlMenu.Controls.Add(this.btnMuse);
             this.pnlMenu.Controls.Add(this.btnYoutube);
             this.pnlMenu.Controls.Add(this.pctAvatar);
             this.pnlMenu.Controls.Add(this.btnStore);
@@ -322,6 +320,7 @@
             this.pnlAll.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.pnlAll.Controls.Add(this.pnlOther);
             this.pnlAll.Controls.Add(this.pnlAnime);
             this.pnlAll.Location = new System.Drawing.Point(0, 91);
@@ -334,6 +333,7 @@
             // 
             this.pnlOther.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlOther.BackColor = System.Drawing.Color.Transparent;
             this.pnlOther.Controls.Add(this.GpBoxRandom);
             this.pnlOther.Controls.Add(this.label1);
             this.pnlOther.Location = new System.Drawing.Point(720, 0);
@@ -349,7 +349,7 @@
             this.GpBoxRandom.Controls.Add(this.btnRandom);
             this.GpBoxRandom.Controls.Add(this.guna2HtmlLabel1);
             this.GpBoxRandom.CustomBorderColor = System.Drawing.Color.Gray;
-            this.GpBoxRandom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(30)))));
+            this.GpBoxRandom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(10)))), ((int)(((byte)(24)))));
             this.GpBoxRandom.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.GpBoxRandom.ForeColor = System.Drawing.Color.White;
             this.GpBoxRandom.Location = new System.Drawing.Point(7, 5);
@@ -373,7 +373,7 @@
             this.btnRandom.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRandom.ForeColor = System.Drawing.Color.White;
             this.btnRandom.HoverState.Parent = this.btnRandom;
-            this.btnRandom.Image = global::FinalProject.Properties.Resources.play;
+            this.btnRandom.Image = global::FinalProject.Properties.Resources.play1;
             this.btnRandom.Location = new System.Drawing.Point(10, 93);
             this.btnRandom.Name = "btnRandom";
             this.btnRandom.ShadowDecoration.Parent = this.btnRandom;
@@ -412,6 +412,7 @@
             this.pnlAnime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlAnime.BackColor = System.Drawing.Color.Transparent;
             this.pnlAnime.Controls.Add(this.label6);
             this.pnlAnime.Controls.Add(this.lbNumMoive);
             this.pnlAnime.Controls.Add(this.lbNumEp);
@@ -433,7 +434,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(539, 34);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 19);
@@ -469,7 +470,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(538, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 19);
@@ -555,7 +556,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(44)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.label2.Location = new System.Drawing.Point(539, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 19);
@@ -611,34 +612,6 @@
             this.pctIcon.Size = new System.Drawing.Size(123, 90);
             this.pctIcon.TabIndex = 2;
             this.pctIcon.TabStop = false;
-            // 
-            // btnMuse
-            // 
-            this.btnMuse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(114)))), ((int)(((byte)(100)))));
-            this.btnMuse.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(231)))), ((int)(((byte)(69)))));
-            this.btnMuse.BorderRadius = 22;
-            this.btnMuse.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot;
-            this.btnMuse.BorderThickness = 2;
-            this.btnMuse.CheckedState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMuse.CheckedState.Parent = this.btnMuse;
-            this.btnMuse.CustomBorderColor = System.Drawing.Color.White;
-            this.btnMuse.CustomImages.Parent = this.btnMuse;
-            this.btnMuse.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMuse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMuse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMuse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMuse.DisabledState.Parent = this.btnMuse;
-            this.btnMuse.FillColor = System.Drawing.Color.Transparent;
-            this.btnMuse.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnMuse.ForeColor = System.Drawing.Color.White;
-            this.btnMuse.HoverState.Parent = this.btnMuse;
-            this.btnMuse.Location = new System.Drawing.Point(362, 9);
-            this.btnMuse.Name = "btnMuse";
-            this.btnMuse.ShadowDecoration.Parent = this.btnMuse;
-            this.btnMuse.Size = new System.Drawing.Size(111, 39);
-            this.btnMuse.TabIndex = 5;
-            this.btnMuse.Text = "Muse";
-            this.btnMuse.Click += new System.EventHandler(this.btnMuse_Click);
             // 
             // Home
             // 
@@ -709,6 +682,5 @@
         private System.Windows.Forms.Label lbNumEp;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button btnYoutube;
-        private Guna.UI2.WinForms.Guna2Button btnMuse;
     }
 }

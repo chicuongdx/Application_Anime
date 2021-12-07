@@ -1,18 +1,33 @@
-﻿using System;
+﻿using System.Windows.Forms;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.IO;
+using Google.Apis.YouTube.v3.Data;
+using System.Net;
 using System.Drawing;
 
 namespace FinalProject
 {
-    class YoutubeVideo
+    public partial class YoutubeVideo : UserControl
     {
-        public string Title { get; set; }
-        public string Author { get; set; }
-        public string Url { get; set; }
-        public Image Thumbnail { get; set; }
+        public string URL;
+        public YoutubeVideo(SearchResult searchResult)
+        {
+            InitializeComponent();
+            string title = searchResult.Snippet.Title;
+            string author = searchResult.Snippet.ChannelTitle;
+            string url = "";
+            byte[] imageBytes = new WebClient().DownloadData(searchResult.Snippet.Thumbnails.Default__.Url);
+
+            Image thumbnail;
+            using (MemoryStream ms = new MemoryStream(imageBytes))
+            {
+                thumbnail = Image.FromStream(ms);
+            }
+            URL = url;
+            Title.Text = title;
+            Author.Text = author;
+            Thumbnail.Image = cv2.resize_width(thumbnail, Thumbnail.Width);
+        }
     }
 }

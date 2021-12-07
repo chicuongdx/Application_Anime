@@ -44,7 +44,7 @@ namespace FinalProject
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DataFrame.WriteExcel(Application.StartupPath + "\\Data.xlsx", DataFrame.DataSet);
+            //DataFrame.WriteExcel(Application.StartupPath + "\\Data.xlsx", DataFrame.DataSet);
         }
 
         private void pnlTile_MouseMove(object sender, MouseEventArgs e)
@@ -290,12 +290,8 @@ namespace FinalProject
 
         private void btnYoutube_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Browser("https://www.youtube.com/"), pnlAll);
+            OpenChildForm(new YoutubeSearch(), pnlAll);
         }
 
-        private void btnMuse_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Browser("https://www.youtube.com/c/MuseVi%E1%BB%87tNam/featured"), pnlAll);
-        }
     }
 }

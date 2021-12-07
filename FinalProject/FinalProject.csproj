@@ -54,6 +54,24 @@
     <Reference Include="GemBox.Spreadsheet, Version=47.0.0.1321, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
       <HintPath>..\packages\GemBox.Spreadsheet.47.0.1321\lib\net35\GemBox.Spreadsheet.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Apis, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.55.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.55.0\lib\net461\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.55.0\lib\net461\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.55.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.55.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.55.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.YouTube.v3, Version=1.55.0.2449, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.YouTube.v3.1.55.0.2449\lib\net45\Google.Apis.YouTube.v3.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.2.5, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.5\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
@@ -81,17 +99,8 @@
       <HintPath>..\packages\taglib-sharp-netstandard2.0.2.1.0\lib\netstandard2.0\taglib-sharp.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
-    <Reference Include="YoutubeSearch, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\YoutubeSearch.dll.1.1\lib\YoutubeSearch.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Browser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Browser.designer.cs">
-      <DependentUpon>Browser.cs</DependentUpon>
-    </Compile>
     <Compile Include="cv2.cs" />
     <Compile Include="DataFrame.cs" />
     <Compile Include="Describe.cs">
@@ -124,12 +133,6 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlayList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PlayList.Designer.cs">
-      <DependentUpon>PlayList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Store.cs">
@@ -150,16 +153,18 @@
     <Compile Include="WatchFilm.Designer.cs">
       <DependentUpon>WatchFilm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Youtube.cs">
+    <Compile Include="YoutubeSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Youtube.designer.cs">
-      <DependentUpon>Youtube.cs</DependentUpon>
+    <Compile Include="YoutubeSearch.Designer.cs">
+      <DependentUpon>YoutubeSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="YoutubeVideo.cs" />
-    <EmbeddedResource Include="Browser.resx">
-      <DependentUpon>Browser.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="YoutubeVideo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="YoutubeVideo.Designer.cs">
+      <DependentUpon>YoutubeVideo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Describe.resx">
       <DependentUpon>Describe.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,11 +196,14 @@
     <EmbeddedResource Include="WatchFilm.resx">
       <DependentUpon>WatchFilm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Youtube.resx">
-      <DependentUpon>Youtube.cs</DependentUpon>
+    <EmbeddedResource Include="YoutubeSearch.resx">
+      <DependentUpon>YoutubeSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="YoutubeVideo.resx">
+      <DependentUpon>YoutubeVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="client_secrets.json" />
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\YoutubeVideo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -284,6 +292,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youtube.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
