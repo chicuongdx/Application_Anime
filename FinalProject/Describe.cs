@@ -54,8 +54,9 @@ namespace FinalProject
             lbDirector.Text = row["Director"].ToString();
             lbStudio.Text = row["Studio"].ToString();
             lbSeason.Text = row["Season"].ToString();
-            lbView.Text = row["View"].ToString();
-
+            lbView.Text = string.Format("{0:N}", Convert.ToInt32(row["View"])).Replace(".00", "");
+            lbNumEp.Text = row["NumEp"].ToString() + " Tập";
+            lbNumEp.Text = row["NumMovie"].ToString() + " Tập";
         }
         private void Load_Data()
         {
@@ -79,19 +80,13 @@ namespace FinalProject
 
         private void lbWatch_Click(object sender, EventArgs e)
         {
+            int idx = DataFrame.DataSet.Rows.IndexOf(row);
+            int view = Convert.ToInt32(row["View"]) + 1;
+
+            DataFrame.DataSet.Rows[idx]["View"] = view;
+
             WatchFilm showFilm = new WatchFilm(row);
             OpenChildForm(showFilm);
-        }
-
-        //random film
-        private void btnRandom_Click(object sender, EventArgs e)
-        {
-            int limit = DataFrame.DataSet.Rows.Count;
-            Random random = new Random();
-
-            int idx = random.Next(limit);
-            DataRow random_row = DataFrame.DataSet.Rows[idx];
-            OpenChildForm(new Describe(random_row));
         }
     }
 }

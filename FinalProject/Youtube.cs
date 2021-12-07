@@ -20,7 +20,7 @@ namespace FinalProject
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             VideoSearch items = new VideoSearch();
             List<YoutubeVideo> list = new List<YoutubeVideo>();

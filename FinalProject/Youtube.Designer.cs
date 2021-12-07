@@ -31,7 +31,7 @@ namespace FinalProject
         {
             this.components = new System.ComponentModel.Container();
             this.youtubeVideoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.urlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,16 +46,16 @@ namespace FinalProject
             // 
             this.youtubeVideoBindingSource.DataSource = typeof(FinalProject.YoutubeVideo);
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(663, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 26);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(663, 12);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(125, 26);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -110,8 +110,9 @@ namespace FinalProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Youtube";
             this.Text = "Youtube";
             ((System.ComponentModel.ISupportInitialize)(this.youtubeVideoBindingSource)).EndInit();
@@ -123,7 +124,7 @@ namespace FinalProject
 
         #endregion
         private System.Windows.Forms.BindingSource youtubeVideoBindingSource;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn urlDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;

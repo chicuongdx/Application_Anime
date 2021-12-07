@@ -12,10 +12,10 @@ namespace FinalProject
 {
     public partial class Browser : Form
     {
-        public Browser()
+        public Browser(string url)
         {
             InitializeComponent();
-            webBrowser1.Navigate("https://www.youtube.com/");
+            webBrowser.Navigate(url);
         }
     }
 }

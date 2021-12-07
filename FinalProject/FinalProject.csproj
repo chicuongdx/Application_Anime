@@ -48,14 +48,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet, Version=47.0.0.1321, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>..\packages\GemBox.Spreadsheet.47.0.1321\lib\net35\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.2.5, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.5\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +80,7 @@
     <Reference Include="taglib-sharp, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\taglib-sharp-netstandard2.0.2.1.0\lib\netstandard2.0\taglib-sharp.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
     <Reference Include="YoutubeSearch, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\YoutubeSearch.dll.1.1\lib\YoutubeSearch.dll</HintPath>
     </Reference>
@@ -76,7 +89,7 @@
     <Compile Include="Browser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Browser.Designer.cs">
+    <Compile Include="Browser.designer.cs">
       <DependentUpon>Browser.cs</DependentUpon>
     </Compile>
     <Compile Include="cv2.cs" />
@@ -92,6 +105,18 @@
     </Compile>
     <Compile Include="Film.Designer.cs">
       <DependentUpon>Film.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filter.Designer.cs">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFilter.Designer.cs">
+      <DependentUpon>FrmFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -128,7 +153,7 @@
     <Compile Include="Youtube.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Youtube.Designer.cs">
+    <Compile Include="Youtube.designer.cs">
       <DependentUpon>Youtube.cs</DependentUpon>
     </Compile>
     <Compile Include="YoutubeVideo.cs" />
@@ -140,6 +165,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Film.resx">
       <DependentUpon>Film.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filter.resx">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFilter.resx">
+      <DependentUpon>FrmFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
