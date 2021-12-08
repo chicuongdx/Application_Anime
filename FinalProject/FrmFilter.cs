@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,10 +13,22 @@ using Guna.UI2.WinForms;
 namespace FinalProject
 {
     public partial class FrmFilter : Form
-    { 
+    {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
+
         public FrmFilter(List<string> filmType, List<string> Studio, Tuple<List<string>, List<string>> Season_Year)
         {
             InitializeComponent();
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             Load_Button(filmType, flowPnlType);
             Load_Button(Studio, flowPnlStudio);
             Load_Button(Season_Year.Item1, flowPnlSeason);

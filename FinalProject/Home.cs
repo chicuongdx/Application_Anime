@@ -15,15 +15,48 @@ namespace FinalProject
 {
     public partial class Home : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
+
         private Form activeForm;
         public Home()
         {
             InitializeComponent();
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             Load_Data(DataFrame.DataSet);
-
+            Login();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-        
+
+        public void Login()
+        {
+            Login loginFrm = new Login();
+            loginFrm.ParentForm = this;
+            loginFrm.ShowDialog();
+        }
+
+        public void Register()
+        {
+            Register registerFrm = new Register();
+            registerFrm.ParentForm = this;
+            registerFrm.ShowDialog();
+        }
+
+        public void ForgetPassword()
+        {
+            ForgetPassword forgetFrm = new ForgetPassword();
+            forgetFrm.ParentForm = this;
+            forgetFrm.ShowDialog();
+        }
+
         //about form home
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -254,7 +287,10 @@ namespace FinalProject
 
         private void pctAvatar_Click(object sender, EventArgs e)
         {
-            
+            User userFrm = new User();
+            this.Visible = false;
+            userFrm.ShowDialog();
+            this.Visible = true;
         }
 
 
@@ -298,6 +334,5 @@ namespace FinalProject
                 new PlayYoutube(frmSearchY.YourChoice).Show();
             }
         }
-
     }
 }

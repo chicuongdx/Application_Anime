@@ -49,7 +49,7 @@ namespace FinalProject
             this.flowPnlType.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowPnlType.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowPnlType.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.flowPnlType.ForeColor = System.Drawing.Color.Navy;
+            this.flowPnlType.ForeColor = System.Drawing.Color.Black;
             this.flowPnlType.Location = new System.Drawing.Point(3, 28);
             this.flowPnlType.Name = "flowPnlType";
             this.flowPnlType.Size = new System.Drawing.Size(898, 127);
@@ -66,8 +66,9 @@ namespace FinalProject
             this.btnFilter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnFilter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnFilter.DisabledState.Parent = this.btnFilter;
+            this.btnFilter.FillColor = System.Drawing.Color.Black;
             this.btnFilter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnFilter.ForeColor = System.Drawing.Color.White;
+            this.btnFilter.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnFilter.HoverState.Parent = this.btnFilter;
             this.btnFilter.Location = new System.Drawing.Point(396, 467);
             this.btnFilter.Name = "btnFilter";
@@ -79,10 +80,11 @@ namespace FinalProject
             // 
             // grpBoxType
             // 
+            this.grpBoxType.BackColor = System.Drawing.Color.LightGray;
             this.grpBoxType.Controls.Add(this.flowPnlType);
             this.grpBoxType.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpBoxType.Font = new System.Drawing.Font("Times New Roman", 20F);
-            this.grpBoxType.ForeColor = System.Drawing.Color.Navy;
+            this.grpBoxType.ForeColor = System.Drawing.Color.Black;
             this.grpBoxType.Location = new System.Drawing.Point(0, 0);
             this.grpBoxType.Name = "grpBoxType";
             this.grpBoxType.Size = new System.Drawing.Size(904, 158);
@@ -94,7 +96,7 @@ namespace FinalProject
             // 
             this.grpBoxSeason.Controls.Add(this.flowPnlSeason);
             this.grpBoxSeason.Font = new System.Drawing.Font("Times New Roman", 20F);
-            this.grpBoxSeason.ForeColor = System.Drawing.Color.Navy;
+            this.grpBoxSeason.ForeColor = System.Drawing.Color.Black;
             this.grpBoxSeason.Location = new System.Drawing.Point(3, 164);
             this.grpBoxSeason.Name = "grpBoxSeason";
             this.grpBoxSeason.Size = new System.Drawing.Size(362, 141);
@@ -116,7 +118,7 @@ namespace FinalProject
             // 
             this.grpBoxYear.Controls.Add(this.flowPnlYear);
             this.grpBoxYear.Font = new System.Drawing.Font("Times New Roman", 20F);
-            this.grpBoxYear.ForeColor = System.Drawing.Color.Navy;
+            this.grpBoxYear.ForeColor = System.Drawing.Color.Black;
             this.grpBoxYear.Location = new System.Drawing.Point(371, 164);
             this.grpBoxYear.Name = "grpBoxYear";
             this.grpBoxYear.Size = new System.Drawing.Size(521, 141);
@@ -138,7 +140,7 @@ namespace FinalProject
             // 
             this.grpBoxStudio.Controls.Add(this.flowPnlStudio);
             this.grpBoxStudio.Font = new System.Drawing.Font("Times New Roman", 20F);
-            this.grpBoxStudio.ForeColor = System.Drawing.Color.Navy;
+            this.grpBoxStudio.ForeColor = System.Drawing.Color.Black;
             this.grpBoxStudio.Location = new System.Drawing.Point(6, 311);
             this.grpBoxStudio.Name = "grpBoxStudio";
             this.grpBoxStudio.Size = new System.Drawing.Size(886, 141);
@@ -160,6 +162,7 @@ namespace FinalProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(904, 524);
             this.Controls.Add(this.grpBoxStudio);
             this.Controls.Add(this.grpBoxYear);
