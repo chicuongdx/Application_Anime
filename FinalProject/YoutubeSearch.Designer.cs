@@ -30,10 +30,11 @@ namespace FinalProject
         private void InitializeComponent()
         {
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pctSearch = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pctLogo = new System.Windows.Forms.PictureBox();
             this.lbLogo = new System.Windows.Forms.Label();
             this.pnlSearch = new System.Windows.Forms.Panel();
+            this.pctSearch = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pctLogo = new System.Windows.Forms.PictureBox();
+            this.ctrlBoxClose = new Guna.UI2.WinForms.Guna2ControlBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +63,30 @@ namespace FinalProject
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
             this.txtSearch.Size = new System.Drawing.Size(364, 36);
             this.txtSearch.TabIndex = 1;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
+            // 
+            // lbLogo
+            // 
+            this.lbLogo.AutoSize = true;
+            this.lbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.lbLogo.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogo.ForeColor = System.Drawing.Color.White;
+            this.lbLogo.Location = new System.Drawing.Point(66, 24);
+            this.lbLogo.Name = "lbLogo";
+            this.lbLogo.Size = new System.Drawing.Size(124, 35);
+            this.lbLogo.TabIndex = 4;
+            this.lbLogo.Text = "Youtube";
+            // 
+            // pnlSearch
+            // 
+            this.pnlSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSearch.AutoScroll = true;
+            this.pnlSearch.Location = new System.Drawing.Point(0, 80);
+            this.pnlSearch.Name = "pnlSearch";
+            this.pnlSearch.Size = new System.Drawing.Size(800, 370);
+            this.pnlSearch.TabIndex = 5;
             // 
             // pctSearch
             // 
@@ -89,28 +114,16 @@ namespace FinalProject
             this.pctLogo.TabIndex = 2;
             this.pctLogo.TabStop = false;
             // 
-            // lbLogo
+            // ctrlBoxClose
             // 
-            this.lbLogo.AutoSize = true;
-            this.lbLogo.BackColor = System.Drawing.Color.Transparent;
-            this.lbLogo.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLogo.ForeColor = System.Drawing.Color.White;
-            this.lbLogo.Location = new System.Drawing.Point(66, 24);
-            this.lbLogo.Name = "lbLogo";
-            this.lbLogo.Size = new System.Drawing.Size(124, 35);
-            this.lbLogo.TabIndex = 4;
-            this.lbLogo.Text = "Youtube";
-            // 
-            // pnlSearch
-            // 
-            this.pnlSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSearch.AutoScroll = true;
-            this.pnlSearch.Location = new System.Drawing.Point(0, 80);
-            this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(800, 370);
-            this.pnlSearch.TabIndex = 5;
+            this.ctrlBoxClose.FillColor = System.Drawing.Color.Maroon;
+            this.ctrlBoxClose.HoverState.Parent = this.ctrlBoxClose;
+            this.ctrlBoxClose.IconColor = System.Drawing.Color.White;
+            this.ctrlBoxClose.Location = new System.Drawing.Point(755, -1);
+            this.ctrlBoxClose.Name = "ctrlBoxClose";
+            this.ctrlBoxClose.ShadowDecoration.Parent = this.ctrlBoxClose;
+            this.ctrlBoxClose.Size = new System.Drawing.Size(45, 29);
+            this.ctrlBoxClose.TabIndex = 6;
             // 
             // YoutubeSearch
             // 
@@ -118,13 +131,16 @@ namespace FinalProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ctrlBoxClose);
             this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.lbLogo);
             this.Controls.Add(this.pctSearch);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.txtSearch);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "YoutubeSearch";
-            this.Text = "YoutubeSearch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Youtube Search";
             ((System.ComponentModel.ISupportInitialize)(this.pctSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
@@ -138,5 +154,6 @@ namespace FinalProject
         private Guna.UI2.WinForms.Guna2PictureBox pctSearch;
         private System.Windows.Forms.Label lbLogo;
         private System.Windows.Forms.Panel pnlSearch;
+        private Guna.UI2.WinForms.Guna2ControlBox ctrlBoxClose;
     }
 }

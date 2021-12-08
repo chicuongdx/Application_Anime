@@ -5,29 +5,54 @@ using System.IO;
 using Google.Apis.YouTube.v3.Data;
 using System.Net;
 using System.Drawing;
+using System.ComponentModel;
 
 namespace FinalProject
 {
     public partial class YoutubeVideo : UserControl
     {
-        public string URL;
+        public SearchResult YourChoice = null;
         public YoutubeVideo(SearchResult searchResult)
         {
             InitializeComponent();
             string title = searchResult.Snippet.Title;
             string author = searchResult.Snippet.ChannelTitle;
-            string url = "";
-            byte[] imageBytes = new WebClient().DownloadData(searchResult.Snippet.Thumbnails.Default__.Url);
-
             Image thumbnail;
-            using (MemoryStream ms = new MemoryStream(imageBytes))
+
+            try
             {
-                thumbnail = Image.FromStream(ms);
+                byte[] imageBytes = new WebClient().DownloadData(searchResult.Snippet.Thumbnails.High.Url);
+                using (MemoryStream ms = new MemoryStream(imageBytes))
+                {
+                    thumbnail = Image.FromStream(ms);
+                }
+                Thumbnail.Image = cv2.resize_width(thumbnail, Thumbnail.Width);
             }
-            URL = url;
+            catch { thumbnail = null; }
             Title.Text = title;
             Author.Text = author;
-            Thumbnail.Image = cv2.resize_width(thumbnail, Thumbnail.Width);
+
+            YourChoice = searchResult;
+        }
+
+        [Browsable(true)]
+        [Category("Action")]
+        [Description("Invoked event pictureBox")]
+        public event EventHandler ChoseClick;
+        private void Mouse_Click(object sender, EventArgs e)
+        {
+            if (this.ChoseClick != null)
+                this.ChoseClick(this, e);
+        }
+
+        [Browsable(true)]
+        [Category("Action")]
+        [Description("Invoked event pictureBox")]
+        public event EventHandler DownloadClick;
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+            if (this.DownloadClick != null)
+                this.DownloadClick(this, e);
         }
     }
 }

@@ -35,16 +35,13 @@
             this.ctrlBoxExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.pnlMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.btnYoutube = new Guna.UI2.WinForms.Guna2Button();
-            this.pctAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnStore = new Guna.UI2.WinForms.Guna2Button();
             this.btnFilter = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.pctSearch = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlAll = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlOther = new System.Windows.Forms.Panel();
             this.GpBoxRandom = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.btnRandom = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlAnime = new Guna.UI2.WinForms.Guna2Panel();
@@ -60,21 +57,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbRating = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlApp = new Guna.UI2.WinForms.Guna2Panel();
             this.pctIcon = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pctAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pctSearch = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnRandom = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlATle.SuspendLayout();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctSearch)).BeginInit();
             this.pnlAll.SuspendLayout();
             this.pnlOther.SuspendLayout();
             this.GpBoxRandom.SuspendLayout();
             this.pnlAnime.SuspendLayout();
             this.pnlPreview.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlATle
@@ -177,19 +177,6 @@
             this.btnYoutube.Text = "Youtube";
             this.btnYoutube.Click += new System.EventHandler(this.btnYoutube_Click);
             // 
-            // pctAvatar
-            // 
-            this.pctAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctAvatar.ImageRotate = 0F;
-            this.pctAvatar.Location = new System.Drawing.Point(849, 4);
-            this.pctAvatar.Name = "pctAvatar";
-            this.pctAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pctAvatar.ShadowDecoration.Parent = this.pctAvatar;
-            this.pctAvatar.Size = new System.Drawing.Size(50, 50);
-            this.pctAvatar.TabIndex = 3;
-            this.pctAvatar.TabStop = false;
-            this.pctAvatar.Click += new System.EventHandler(this.pctAvatar_Click);
-            // 
             // btnStore
             // 
             this.btnStore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -275,21 +262,6 @@
             this.btnHome.Text = "Trang chủ";
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // pctSearch
-            // 
-            this.pctSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctSearch.BackgroundImage = global::FinalProject.Properties.Resources.search;
-            this.pctSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pctSearch.FillColor = System.Drawing.Color.Transparent;
-            this.pctSearch.ImageRotate = 0F;
-            this.pctSearch.Location = new System.Drawing.Point(648, 16);
-            this.pctSearch.Name = "pctSearch";
-            this.pctSearch.ShadowDecoration.Parent = this.pctSearch;
-            this.pctSearch.Size = new System.Drawing.Size(41, 23);
-            this.pctSearch.TabIndex = 1;
-            this.pctSearch.TabStop = false;
-            this.pctSearch.Click += new System.EventHandler(this.pctSearch_Click);
-            // 
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -359,29 +331,6 @@
             this.GpBoxRandom.TabIndex = 1;
             this.GpBoxRandom.Text = "Hôm nay xem gì?";
             // 
-            // btnRandom
-            // 
-            this.btnRandom.BorderRadius = 5;
-            this.btnRandom.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.btnRandom.CheckedState.Parent = this.btnRandom;
-            this.btnRandom.CustomImages.Parent = this.btnRandom;
-            this.btnRandom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRandom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRandom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRandom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRandom.DisabledState.Parent = this.btnRandom;
-            this.btnRandom.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRandom.ForeColor = System.Drawing.Color.White;
-            this.btnRandom.HoverState.Parent = this.btnRandom;
-            this.btnRandom.Image = global::FinalProject.Properties.Resources.play1;
-            this.btnRandom.Location = new System.Drawing.Point(10, 93);
-            this.btnRandom.Name = "btnRandom";
-            this.btnRandom.ShadowDecoration.Parent = this.btnRandom;
-            this.btnRandom.Size = new System.Drawing.Size(180, 38);
-            this.btnRandom.TabIndex = 2;
-            this.btnRandom.Text = "Xem anime ngẫu nhiên";
-            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
-            // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -400,7 +349,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Trajan Pro", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(40)))), ((int)(((byte)(44)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.label1.Location = new System.Drawing.Point(12, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 28);
@@ -576,16 +525,6 @@
             this.lbRating.TabIndex = 1;
             this.lbRating.Text = "0.0";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::FinalProject.Properties.Resources.star;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(635, 73);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 19);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // pnlApp
             // 
             this.pnlApp.Controls.Add(this.pctIcon);
@@ -613,6 +552,67 @@
             this.pctIcon.TabIndex = 2;
             this.pctIcon.TabStop = false;
             // 
+            // pctAvatar
+            // 
+            this.pctAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctAvatar.ImageRotate = 0F;
+            this.pctAvatar.Location = new System.Drawing.Point(849, 4);
+            this.pctAvatar.Name = "pctAvatar";
+            this.pctAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pctAvatar.ShadowDecoration.Parent = this.pctAvatar;
+            this.pctAvatar.Size = new System.Drawing.Size(50, 50);
+            this.pctAvatar.TabIndex = 3;
+            this.pctAvatar.TabStop = false;
+            this.pctAvatar.Click += new System.EventHandler(this.pctAvatar_Click);
+            // 
+            // pctSearch
+            // 
+            this.pctSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctSearch.BackgroundImage = global::FinalProject.Properties.Resources.search;
+            this.pctSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pctSearch.FillColor = System.Drawing.Color.Transparent;
+            this.pctSearch.ImageRotate = 0F;
+            this.pctSearch.Location = new System.Drawing.Point(648, 16);
+            this.pctSearch.Name = "pctSearch";
+            this.pctSearch.ShadowDecoration.Parent = this.pctSearch;
+            this.pctSearch.Size = new System.Drawing.Size(41, 23);
+            this.pctSearch.TabIndex = 1;
+            this.pctSearch.TabStop = false;
+            this.pctSearch.Click += new System.EventHandler(this.pctSearch_Click);
+            // 
+            // btnRandom
+            // 
+            this.btnRandom.BorderRadius = 5;
+            this.btnRandom.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.btnRandom.CheckedState.Parent = this.btnRandom;
+            this.btnRandom.CustomImages.Parent = this.btnRandom;
+            this.btnRandom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRandom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRandom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRandom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRandom.DisabledState.Parent = this.btnRandom;
+            this.btnRandom.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRandom.ForeColor = System.Drawing.Color.White;
+            this.btnRandom.HoverState.Parent = this.btnRandom;
+            this.btnRandom.Image = global::FinalProject.Properties.Resources.play1;
+            this.btnRandom.Location = new System.Drawing.Point(10, 93);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.ShadowDecoration.Parent = this.btnRandom;
+            this.btnRandom.Size = new System.Drawing.Size(180, 38);
+            this.btnRandom.TabIndex = 2;
+            this.btnRandom.Text = "Xem anime ngẫu nhiên";
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::FinalProject.Properties.Resources.star;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(635, 73);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 19);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -629,8 +629,6 @@
             this.Load += new System.EventHandler(this.Home_Load);
             this.pnlATle.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctSearch)).EndInit();
             this.pnlAll.ResumeLayout(false);
             this.pnlOther.ResumeLayout(false);
             this.pnlOther.PerformLayout();
@@ -639,9 +637,11 @@
             this.pnlAnime.PerformLayout();
             this.pnlPreview.ResumeLayout(false);
             this.pnlPreview.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlApp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

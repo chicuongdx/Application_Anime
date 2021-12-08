@@ -290,7 +290,13 @@ namespace FinalProject
 
         private void btnYoutube_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new YoutubeSearch(), pnlAll);
+            YoutubeSearch frmSearchY = new YoutubeSearch();
+            frmSearchY.ShowDialog();
+
+            if (frmSearchY.YourChoice != null)
+            {
+                new PlayYoutube(frmSearchY.YourChoice).Show();
+            }
         }
 
     }

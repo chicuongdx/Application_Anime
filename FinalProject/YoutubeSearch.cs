@@ -11,6 +11,9 @@ using Google.Apis.Upload;
 using Google.Apis.Util.Store;
 using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
+using System.Drawing;
+using VideoLibrary;
+using MediaToolkit;
 
 namespace FinalProject
 {
@@ -19,7 +22,10 @@ namespace FinalProject
         public YoutubeSearch()
         {
             InitializeComponent();
-            //Control.CheckForIllegalCrossThreadCalls = false;
+            using (Bitmap bm = Properties.Resources.youtube)
+            {
+                this.Icon = Icon.FromHandle(bm.GetHicon());
+            }
         }
 
 
@@ -27,6 +33,7 @@ namespace FinalProject
         {
             try
             {
+                pnlSearch.Controls.Clear();
                 ShowSearch(Run(keyword));
             }
             catch (AggregateException ex)
@@ -73,6 +80,30 @@ namespace FinalProject
                 YoutubeVideo video = new YoutubeVideo(searchResult);
                 video.Dock = DockStyle.Top;
                 pnlSearch.Controls.Add(video);
+                video.ChoseClick += SearchReasult_Click;
+                video.DownloadClick += DownloadVideo;
+            }
+        }
+
+        public SearchResult YourChoice;
+        private void SearchReasult_Click(object sender, EventArgs e)
+        {
+            YourChoice = ((YoutubeVideo)sender).YourChoice;
+            this.Close();
+        }
+        private async void DownloadVideo(object sender, EventArgs e)
+        {
+            SearchResult video = ((YoutubeVideo)sender).YourChoice;
+            using (var folderDialog = new FolderBrowserDialog())
+            {
+                if (folderDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string path  = folderDialog.SelectedPath + "\\" + video.Snippet.Title + ".mp4";
+                    var ytb = YouTube.Default;
+                    var vid = await ytb.GetVideoAsync("https://www.youtube.com/watch?v=" + video.Id.VideoId);
+                    File.WriteAllBytes(path, await vid.GetBytesAsync());
+                    MessageBox.Show(video.Snippet.Title + " Download Video Done!");
+                }
             }
         }
 
@@ -80,6 +111,12 @@ namespace FinalProject
         private void pctSearch_Click(object sender, EventArgs e)
         {
             SearchVideo(txtSearch.Text);
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+           if (e.KeyCode == Keys.Enter)
+                SearchVideo(txtSearch.Text);
         }
     }
 }
