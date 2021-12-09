@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Runtime.InteropServices;
+using Newtonsoft.Json;
 
 namespace FinalProject
 {
@@ -22,6 +23,23 @@ namespace FinalProject
         }
 
         private void Describe_Load(object sender, EventArgs e)
+        {
+            Load_Data();
+            Load_Comment();
+            //curUser
+            try
+            {
+                string path_avatar = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
+                pctAvatar.Image = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
+            }
+            catch
+            {
+                pctAvatar.Image = cv2.resize(Properties.Resources.avarta, new Size(pctAvatar.Width, pctAvatar.Height));
+            }
+            lbUserName.Text = UserData.currentUsername;
+        }
+
+        private void Describe_ClientSizeChanged(object sender, EventArgs e)
         {
             Load_Data();
         }
@@ -76,6 +94,62 @@ namespace FinalProject
             showFilm.Show();
         }
         //comments film
+        private void Load_Comment()
+        {
+            //load comment
+            string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Comments.txt";
+            if (!File.Exists(path))
+            {
+                using (var tw = new StreamWriter(path, true))
+                {
+                    tw.WriteLine();
+                }
+            }
+            List<string> data = File.ReadAllLines(path).OfType<string>().ToList(); ;
+            data.Reverse();
+            foreach (var line in data)
+            {
+                if (line != "")
+                {
+                    try
+                    {
+                        Comment cmt = new Comment(line)
+                        {
+                            Dock = DockStyle.Top,
+                        };
+                        this.Controls.Add(cmt);
+                        cmt.BringToFront();
+                    }
+                    catch { }
+                }
+            }
+        }
 
+        private void ResetCmt()
+        {
+            foreach(Control ctrl in this.Controls)
+            {
+                if (ctrl.GetType() == typeof(Comment))
+                {
+                    ctrl.Hide();
+                }
+            }
+        }
+
+        private void txtWriteCmt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Comments.txt";
+                string data = "{\"username\": \"" + lbUserName.Text + "\", \"cmt\": \"" + txtWriteCmt.Text + "\"}";
+                using (StreamWriter sr = File.AppendText(path))
+                {
+                    sr.WriteLine(data);
+                }
+                ResetCmt();
+                Load_Comment();
+                txtWriteCmt.Text = "";
+            }
+        }
     }
 }

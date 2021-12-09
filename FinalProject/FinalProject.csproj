@@ -280,6 +280,7 @@
       <DependentUpon>Comment.cs</DependentUpon>
     </Compile>
     <Compile Include="cv2.cs" />
+    <Compile Include="DataComment.cs" />
     <Compile Include="DataFrame.cs" />
     <Compile Include="Describe.cs">
       <SubType>Form</SubType>
@@ -537,6 +538,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\avarta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noavatar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

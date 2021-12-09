@@ -53,7 +53,7 @@ namespace FinalProject
                 string path_avatar = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
                 pctAvatar.Image = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
             }
-            catch { }
+            catch { pctAvatar.Image = cv2.resize(Properties.Resources.avarta, new Size(pctAvatar.Width, pctAvatar.Height)); }
         }
 
         public void Register()
