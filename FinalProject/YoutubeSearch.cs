@@ -14,14 +14,27 @@ using Google.Apis.YouTube.v3.Data;
 using System.Drawing;
 using VideoLibrary;
 using MediaToolkit;
+using System.Runtime.InteropServices;
 
 namespace FinalProject
 {
     public partial class YoutubeSearch : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
+
         public YoutubeSearch()
         {
             InitializeComponent();
+            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             using (Bitmap bm = Properties.Resources.youtube)
             {
                 this.Icon = Icon.FromHandle(bm.GetHicon());

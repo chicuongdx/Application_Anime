@@ -78,6 +78,8 @@ namespace FinalProject
             int idx = random.Next(limit);
             DataRow random_row = DataFrame.DataSet.Rows[idx];
             Load_Preview(random_row);
+
+            pnlPreview.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlPreview.Width, pnlPreview.Height, 20, 20));
         }
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)

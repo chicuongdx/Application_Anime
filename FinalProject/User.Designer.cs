@@ -47,7 +47,7 @@ namespace FinalProject
             // 
             this.pictureBox1.BackgroundImage = global::FinalProject.Properties.Resources.avarta;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(209, 66);
+            this.pictureBox1.Location = new System.Drawing.Point(280, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(81, 80);
             this.pictureBox1.TabIndex = 0;
@@ -58,7 +58,7 @@ namespace FinalProject
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(156, 24);
+            this.label3.Location = new System.Drawing.Point(227, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(189, 22);
             this.label3.TabIndex = 17;
@@ -68,7 +68,7 @@ namespace FinalProject
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 265);
+            this.label1.Location = new System.Drawing.Point(179, 254);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 24;
@@ -77,7 +77,7 @@ namespace FinalProject
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(231, 262);
+            this.txtPassword.Location = new System.Drawing.Point(305, 251);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(165, 26);
@@ -88,7 +88,7 @@ namespace FinalProject
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(105, 221);
+            this.label2.Location = new System.Drawing.Point(179, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 22;
@@ -98,7 +98,7 @@ namespace FinalProject
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(105, 180);
+            this.label4.Location = new System.Drawing.Point(179, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 20);
             this.label4.TabIndex = 21;
@@ -107,7 +107,7 @@ namespace FinalProject
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(231, 218);
+            this.txtEmail.Location = new System.Drawing.Point(305, 207);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(165, 26);
             this.txtEmail.TabIndex = 20;
@@ -116,7 +116,7 @@ namespace FinalProject
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(231, 177);
+            this.txtUsername.Location = new System.Drawing.Point(305, 166);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(165, 26);
             this.txtUsername.TabIndex = 19;
@@ -127,7 +127,7 @@ namespace FinalProject
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(183, 323);
+            this.btnLogin.Location = new System.Drawing.Point(261, 340);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(124, 35);
             this.btnLogin.TabIndex = 25;
@@ -139,7 +139,7 @@ namespace FinalProject
             // 
             this.pictureBox2.BackgroundImage = global::FinalProject.Properties.Resources.x;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(458, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(594, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 23);
             this.pictureBox2.TabIndex = 26;
@@ -151,7 +151,7 @@ namespace FinalProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(497, 397);
+            this.ClientSize = new System.Drawing.Size(633, 519);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);

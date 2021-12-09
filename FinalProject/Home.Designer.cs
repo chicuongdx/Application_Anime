@@ -84,10 +84,10 @@
             this.pnlATle.Controls.Add(this.ctrlBoxHide);
             this.pnlATle.Controls.Add(this.ctrlBoxMax);
             this.pnlATle.Controls.Add(this.ctrlBoxExit);
-            this.pnlATle.Location = new System.Drawing.Point(118, 0);
+            this.pnlATle.Location = new System.Drawing.Point(123, 0);
             this.pnlATle.Name = "pnlATle";
             this.pnlATle.ShadowDecoration.Parent = this.pnlATle;
-            this.pnlATle.Size = new System.Drawing.Size(1006, 31);
+            this.pnlATle.Size = new System.Drawing.Size(1001, 31);
             this.pnlATle.TabIndex = 0;
             this.pnlATle.DoubleClick += new System.EventHandler(this.pnlTile_DoubleClick);
             this.pnlATle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTile_MouseMove);
@@ -101,7 +101,7 @@
             this.ctrlBoxHide.FillColor = System.Drawing.Color.DarkOrange;
             this.ctrlBoxHide.HoverState.Parent = this.ctrlBoxHide;
             this.ctrlBoxHide.IconColor = System.Drawing.Color.Black;
-            this.ctrlBoxHide.Location = new System.Drawing.Point(856, 5);
+            this.ctrlBoxHide.Location = new System.Drawing.Point(851, 5);
             this.ctrlBoxHide.Name = "ctrlBoxHide";
             this.ctrlBoxHide.ShadowDecoration.Parent = this.ctrlBoxHide;
             this.ctrlBoxHide.Size = new System.Drawing.Size(40, 22);
@@ -116,7 +116,7 @@
             this.ctrlBoxMax.FillColor = System.Drawing.Color.DarkOrange;
             this.ctrlBoxMax.HoverState.Parent = this.ctrlBoxMax;
             this.ctrlBoxMax.IconColor = System.Drawing.Color.Black;
-            this.ctrlBoxMax.Location = new System.Drawing.Point(907, 5);
+            this.ctrlBoxMax.Location = new System.Drawing.Point(902, 5);
             this.ctrlBoxMax.Name = "ctrlBoxMax";
             this.ctrlBoxMax.ShadowDecoration.Parent = this.ctrlBoxMax;
             this.ctrlBoxMax.Size = new System.Drawing.Size(40, 22);
@@ -130,7 +130,7 @@
             this.ctrlBoxExit.FillColor = System.Drawing.Color.DarkOrange;
             this.ctrlBoxExit.HoverState.Parent = this.ctrlBoxExit;
             this.ctrlBoxExit.IconColor = System.Drawing.Color.Black;
-            this.ctrlBoxExit.Location = new System.Drawing.Point(958, 5);
+            this.ctrlBoxExit.Location = new System.Drawing.Point(953, 5);
             this.ctrlBoxExit.Name = "ctrlBoxExit";
             this.ctrlBoxExit.ShadowDecoration.Parent = this.ctrlBoxExit;
             this.ctrlBoxExit.Size = new System.Drawing.Size(40, 22);
@@ -143,6 +143,7 @@
             this.pnlMenu.BackColor = System.Drawing.Color.Black;
             this.pnlMenu.BorderColor = System.Drawing.Color.Black;
             this.pnlMenu.BorderRadius = 10;
+            this.pnlMenu.BorderThickness = 1;
             this.pnlMenu.Controls.Add(this.btnYoutube);
             this.pnlMenu.Controls.Add(this.pctAvatar);
             this.pnlMenu.Controls.Add(this.btnStore);
@@ -150,10 +151,10 @@
             this.pnlMenu.Controls.Add(this.btnHome);
             this.pnlMenu.Controls.Add(this.pctSearch);
             this.pnlMenu.Controls.Add(this.txtSearch);
-            this.pnlMenu.Location = new System.Drawing.Point(121, 31);
+            this.pnlMenu.Location = new System.Drawing.Point(123, 38);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.ShadowDecoration.Parent = this.pnlMenu;
-            this.pnlMenu.Size = new System.Drawing.Size(993, 57);
+            this.pnlMenu.Size = new System.Drawing.Size(992, 57);
             this.pnlMenu.TabIndex = 1;
             // 
             // btnYoutube
@@ -186,10 +187,11 @@
             // pctAvatar
             // 
             this.pctAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctAvatar.BackColor = System.Drawing.Color.DarkGray;
-            this.pctAvatar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pctAvatar.BackColor = System.Drawing.Color.Black;
+            this.pctAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pctAvatar.Image = global::FinalProject.Properties.Resources.avarta;
             this.pctAvatar.ImageRotate = 0F;
-            this.pctAvatar.Location = new System.Drawing.Point(939, 4);
+            this.pctAvatar.Location = new System.Drawing.Point(937, 2);
             this.pctAvatar.Name = "pctAvatar";
             this.pctAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pctAvatar.ShadowDecoration.Parent = this.pctAvatar;
@@ -286,7 +288,7 @@
             this.pctSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pctSearch.FillColor = System.Drawing.Color.Transparent;
             this.pctSearch.ImageRotate = 0F;
-            this.pctSearch.Location = new System.Drawing.Point(738, 16);
+            this.pctSearch.Location = new System.Drawing.Point(737, 16);
             this.pctSearch.Name = "pctSearch";
             this.pctSearch.ShadowDecoration.Parent = this.pctSearch;
             this.pctSearch.Size = new System.Drawing.Size(41, 23);
@@ -297,6 +299,9 @@
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.BorderColor = System.Drawing.Color.DarkOrange;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.BorderThickness = 2;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -309,13 +314,13 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(777, 16);
+            this.txtSearch.Location = new System.Drawing.Point(784, 16);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(156, 23);
+            this.txtSearch.Size = new System.Drawing.Size(148, 23);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
@@ -423,7 +428,7 @@
             this.pnlAnime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlAnime.BackColor = System.Drawing.Color.White;
+            this.pnlAnime.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlAnime.BorderColor = System.Drawing.Color.Black;
             this.pnlAnime.BorderRadius = 10;
             this.pnlAnime.BorderThickness = 2;
@@ -599,7 +604,7 @@
             this.pnlApp.Location = new System.Drawing.Point(0, 0);
             this.pnlApp.Name = "pnlApp";
             this.pnlApp.ShadowDecoration.Parent = this.pnlApp;
-            this.pnlApp.Size = new System.Drawing.Size(1124, 86);
+            this.pnlApp.Size = new System.Drawing.Size(1124, 104);
             this.pnlApp.TabIndex = 2;
             // 
             // pctIcon
@@ -613,7 +618,7 @@
             this.pctIcon.Location = new System.Drawing.Point(0, 0);
             this.pctIcon.Name = "pctIcon";
             this.pctIcon.ShadowDecoration.Parent = this.pctIcon;
-            this.pctIcon.Size = new System.Drawing.Size(125, 86);
+            this.pctIcon.Size = new System.Drawing.Size(125, 104);
             this.pctIcon.TabIndex = 2;
             this.pctIcon.TabStop = false;
             // 

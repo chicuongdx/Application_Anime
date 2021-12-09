@@ -70,7 +70,7 @@ namespace FinalProject
             this.lbLogo.AutoSize = true;
             this.lbLogo.BackColor = System.Drawing.Color.Transparent;
             this.lbLogo.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLogo.ForeColor = System.Drawing.Color.White;
+            this.lbLogo.ForeColor = System.Drawing.Color.Black;
             this.lbLogo.Location = new System.Drawing.Point(66, 24);
             this.lbLogo.Name = "lbLogo";
             this.lbLogo.Size = new System.Drawing.Size(124, 35);
@@ -116,20 +116,25 @@ namespace FinalProject
             // 
             // ctrlBoxClose
             // 
-            this.ctrlBoxClose.FillColor = System.Drawing.Color.Maroon;
+            this.ctrlBoxClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrlBoxClose.BackColor = System.Drawing.Color.Transparent;
+            this.ctrlBoxClose.BorderRadius = 5;
+            this.ctrlBoxClose.BorderThickness = 1;
+            this.ctrlBoxClose.FillColor = System.Drawing.Color.DarkOrange;
+            this.ctrlBoxClose.ForeColor = System.Drawing.Color.Black;
             this.ctrlBoxClose.HoverState.Parent = this.ctrlBoxClose;
-            this.ctrlBoxClose.IconColor = System.Drawing.Color.White;
-            this.ctrlBoxClose.Location = new System.Drawing.Point(755, -1);
+            this.ctrlBoxClose.IconColor = System.Drawing.Color.Black;
+            this.ctrlBoxClose.Location = new System.Drawing.Point(753, 6);
             this.ctrlBoxClose.Name = "ctrlBoxClose";
             this.ctrlBoxClose.ShadowDecoration.Parent = this.ctrlBoxClose;
-            this.ctrlBoxClose.Size = new System.Drawing.Size(45, 29);
+            this.ctrlBoxClose.Size = new System.Drawing.Size(41, 25);
             this.ctrlBoxClose.TabIndex = 6;
             // 
             // YoutubeSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ctrlBoxClose);
             this.Controls.Add(this.pnlSearch);
