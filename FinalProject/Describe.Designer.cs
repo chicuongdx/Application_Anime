@@ -54,10 +54,17 @@ namespace FinalProject
             this.lbDirector = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pnlWriteCmt = new System.Windows.Forms.Panel();
+            this.txtWriteCmt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbUserName = new System.Windows.Forms.Label();
+            this.pctAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pnlPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctImage)).BeginInit();
             this.pnlDescribe.SuspendLayout();
+            this.pnlWriteCmt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlPreview
@@ -76,10 +83,11 @@ namespace FinalProject
             this.pnlPreview.Controls.Add(this.lbView);
             this.pnlPreview.Controls.Add(this.label1);
             this.pnlPreview.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlPreview.Location = new System.Drawing.Point(4, 4);
+            this.pnlPreview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlPreview.Location = new System.Drawing.Point(0, 0);
             this.pnlPreview.Name = "pnlPreview";
             this.pnlPreview.ShadowDecoration.Parent = this.pnlPreview;
-            this.pnlPreview.Size = new System.Drawing.Size(693, 283);
+            this.pnlPreview.Size = new System.Drawing.Size(716, 283);
             this.pnlPreview.TabIndex = 0;
             // 
             // label6
@@ -101,7 +109,7 @@ namespace FinalProject
             this.lbNumMoive.BackColor = System.Drawing.Color.Transparent;
             this.lbNumMoive.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNumMoive.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbNumMoive.Location = new System.Drawing.Point(315, 125);
+            this.lbNumMoive.Location = new System.Drawing.Point(338, 125);
             this.lbNumMoive.Name = "lbNumMoive";
             this.lbNumMoive.Size = new System.Drawing.Size(17, 19);
             this.lbNumMoive.TabIndex = 8;
@@ -114,7 +122,7 @@ namespace FinalProject
             this.lbNumEp.BackColor = System.Drawing.Color.Transparent;
             this.lbNumEp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNumEp.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbNumEp.Location = new System.Drawing.Point(315, 96);
+            this.lbNumEp.Location = new System.Drawing.Point(338, 96);
             this.lbNumEp.Name = "lbNumEp";
             this.lbNumEp.Size = new System.Drawing.Size(17, 19);
             this.lbNumEp.TabIndex = 8;
@@ -174,7 +182,7 @@ namespace FinalProject
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(215, 196);
+            this.label5.Location = new System.Drawing.Point(238, 196);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 19);
             this.label5.TabIndex = 6;
@@ -210,7 +218,7 @@ namespace FinalProject
             this.lbView.BackColor = System.Drawing.Color.Transparent;
             this.lbView.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbView.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lbView.Location = new System.Drawing.Point(313, 196);
+            this.lbView.Location = new System.Drawing.Point(336, 196);
             this.lbView.Name = "lbView";
             this.lbView.Size = new System.Drawing.Size(17, 19);
             this.lbView.TabIndex = 3;
@@ -243,10 +251,11 @@ namespace FinalProject
             this.pnlDescribe.Controls.Add(this.lbDirector);
             this.pnlDescribe.Controls.Add(this.label2);
             this.pnlDescribe.Controls.Add(this.label8);
-            this.pnlDescribe.Location = new System.Drawing.Point(3, 288);
+            this.pnlDescribe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDescribe.Location = new System.Drawing.Point(0, 283);
             this.pnlDescribe.Name = "pnlDescribe";
             this.pnlDescribe.ShadowDecoration.Parent = this.pnlDescribe;
-            this.pnlDescribe.Size = new System.Drawing.Size(694, 199);
+            this.pnlDescribe.Size = new System.Drawing.Size(716, 199);
             this.pnlDescribe.TabIndex = 2;
             // 
             // lbDescribe
@@ -260,7 +269,7 @@ namespace FinalProject
             this.lbDescribe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbDescribe.Location = new System.Drawing.Point(3, 130);
             this.lbDescribe.Name = "lbDescribe";
-            this.lbDescribe.Size = new System.Drawing.Size(688, 0);
+            this.lbDescribe.Size = new System.Drawing.Size(710, 0);
             this.lbDescribe.TabIndex = 5;
             this.lbDescribe.Text = "Describe";
             // 
@@ -271,7 +280,7 @@ namespace FinalProject
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(470, 74);
+            this.label10.Location = new System.Drawing.Point(492, 74);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 19);
             this.label10.TabIndex = 6;
@@ -299,7 +308,7 @@ namespace FinalProject
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(470, 42);
+            this.label9.Location = new System.Drawing.Point(492, 42);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 19);
             this.label9.TabIndex = 4;
@@ -324,7 +333,7 @@ namespace FinalProject
             this.lbSeason.BackColor = System.Drawing.Color.Transparent;
             this.lbSeason.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSeason.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbSeason.Location = new System.Drawing.Point(538, 74);
+            this.lbSeason.Location = new System.Drawing.Point(560, 74);
             this.lbSeason.Name = "lbSeason";
             this.lbSeason.Size = new System.Drawing.Size(53, 19);
             this.lbSeason.TabIndex = 4;
@@ -337,7 +346,7 @@ namespace FinalProject
             this.lbStudio.BackColor = System.Drawing.Color.Transparent;
             this.lbStudio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStudio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbStudio.Location = new System.Drawing.Point(534, 42);
+            this.lbStudio.Location = new System.Drawing.Point(556, 42);
             this.lbStudio.Name = "lbStudio";
             this.lbStudio.Size = new System.Drawing.Size(48, 19);
             this.lbStudio.TabIndex = 4;
@@ -391,25 +400,104 @@ namespace FinalProject
             this.label8.TabIndex = 4;
             this.label8.Text = "Thông tin:";
             // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(0, 482);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(716, 35);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Bình luận";
+            // 
+            // pnlWriteCmt
+            // 
+            this.pnlWriteCmt.Controls.Add(this.txtWriteCmt);
+            this.pnlWriteCmt.Controls.Add(this.lbUserName);
+            this.pnlWriteCmt.Controls.Add(this.pctAvatar);
+            this.pnlWriteCmt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlWriteCmt.Location = new System.Drawing.Point(0, 517);
+            this.pnlWriteCmt.Name = "pnlWriteCmt";
+            this.pnlWriteCmt.Size = new System.Drawing.Size(716, 80);
+            this.pnlWriteCmt.TabIndex = 6;
+            // 
+            // txtWriteCmt
+            // 
+            this.txtWriteCmt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtWriteCmt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtWriteCmt.DefaultText = "";
+            this.txtWriteCmt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtWriteCmt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtWriteCmt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtWriteCmt.DisabledState.Parent = this.txtWriteCmt;
+            this.txtWriteCmt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtWriteCmt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtWriteCmt.FocusedState.Parent = this.txtWriteCmt;
+            this.txtWriteCmt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtWriteCmt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtWriteCmt.HoverState.Parent = this.txtWriteCmt;
+            this.txtWriteCmt.Location = new System.Drawing.Point(86, 41);
+            this.txtWriteCmt.Name = "txtWriteCmt";
+            this.txtWriteCmt.PasswordChar = '\0';
+            this.txtWriteCmt.PlaceholderText = "";
+            this.txtWriteCmt.SelectedText = "";
+            this.txtWriteCmt.ShadowDecoration.Parent = this.txtWriteCmt;
+            this.txtWriteCmt.Size = new System.Drawing.Size(618, 36);
+            this.txtWriteCmt.TabIndex = 7;
+            this.txtWriteCmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWriteCmt_KeyDown);
+            // 
+            // lbUserName
+            // 
+            this.lbUserName.AutoSize = true;
+            this.lbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserName.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbUserName.Location = new System.Drawing.Point(86, 9);
+            this.lbUserName.Name = "lbUserName";
+            this.lbUserName.Size = new System.Drawing.Size(55, 20);
+            this.lbUserName.TabIndex = 6;
+            this.lbUserName.Text = "Name";
+            // 
+            // pctAvatar
+            // 
+            this.pctAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.pctAvatar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pctAvatar.ImageRotate = 0F;
+            this.pctAvatar.Location = new System.Drawing.Point(0, 0);
+            this.pctAvatar.Name = "pctAvatar";
+            this.pctAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pctAvatar.ShadowDecoration.Parent = this.pctAvatar;
+            this.pctAvatar.Size = new System.Drawing.Size(80, 80);
+            this.pctAvatar.TabIndex = 5;
+            this.pctAvatar.TabStop = false;
+            // 
             // Describe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(716, 621);
+            this.ClientSize = new System.Drawing.Size(716, 648);
+            this.Controls.Add(this.pnlWriteCmt);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.pnlDescribe);
             this.Controls.Add(this.pnlPreview);
             this.Name = "Describe";
             this.Text = "Describle";
             this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.Describe_Load);
+            this.ClientSizeChanged += new System.EventHandler(this.Describe_ClientSizeChanged);
             this.pnlPreview.ResumeLayout(false);
             this.pnlPreview.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctImage)).EndInit();
             this.pnlDescribe.ResumeLayout(false);
             this.pnlDescribe.PerformLayout();
+            this.pnlWriteCmt.ResumeLayout(false);
+            this.pnlWriteCmt.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,5 +529,10 @@ namespace FinalProject
         private System.Windows.Forms.Label lbNumEp;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbNumMoive;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel pnlWriteCmt;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pctAvatar;
+        private System.Windows.Forms.Label lbUserName;
+        private Guna.UI2.WinForms.Guna2TextBox txtWriteCmt;
     }
 }

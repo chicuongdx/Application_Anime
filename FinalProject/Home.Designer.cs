@@ -78,12 +78,11 @@
             // 
             // pnlATle
             // 
-            this.pnlATle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlATle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlATle.Controls.Add(this.ctrlBoxHide);
             this.pnlATle.Controls.Add(this.ctrlBoxMax);
             this.pnlATle.Controls.Add(this.ctrlBoxExit);
+            this.pnlATle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlATle.Location = new System.Drawing.Point(0, 0);
             this.pnlATle.Name = "pnlATle";
             this.pnlATle.ShadowDecoration.Parent = this.pnlATle;
@@ -138,8 +137,6 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMenu.BackColor = System.Drawing.Color.Transparent;
             this.pnlMenu.BorderColor = System.Drawing.Color.Black;
             this.pnlMenu.BorderRadius = 10;
@@ -151,11 +148,12 @@
             this.pnlMenu.Controls.Add(this.btnHome);
             this.pnlMenu.Controls.Add(this.pctSearch);
             this.pnlMenu.Controls.Add(this.txtSearch);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMenu.FillColor = System.Drawing.Color.Black;
-            this.pnlMenu.Location = new System.Drawing.Point(7, 35);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 31);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.ShadowDecoration.Parent = this.pnlMenu;
-            this.pnlMenu.Size = new System.Drawing.Size(1109, 57);
+            this.pnlMenu.Size = new System.Drawing.Size(1124, 57);
             this.pnlMenu.TabIndex = 1;
             // 
             // btnYoutube
@@ -192,7 +190,7 @@
             this.pctAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pctAvatar.Image = global::FinalProject.Properties.Resources.avarta;
             this.pctAvatar.ImageRotate = 0F;
-            this.pctAvatar.Location = new System.Drawing.Point(1054, 4);
+            this.pctAvatar.Location = new System.Drawing.Point(1069, 4);
             this.pctAvatar.Name = "pctAvatar";
             this.pctAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pctAvatar.ShadowDecoration.Parent = this.pctAvatar;
@@ -289,7 +287,7 @@
             this.pctSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pctSearch.FillColor = System.Drawing.Color.Transparent;
             this.pctSearch.ImageRotate = 0F;
-            this.pctSearch.Location = new System.Drawing.Point(854, 16);
+            this.pctSearch.Location = new System.Drawing.Point(869, 16);
             this.pctSearch.Name = "pctSearch";
             this.pctSearch.ShadowDecoration.Parent = this.pctSearch;
             this.pctSearch.Size = new System.Drawing.Size(41, 23);
@@ -315,7 +313,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(901, 16);
+            this.txtSearch.Location = new System.Drawing.Point(916, 16);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "";
