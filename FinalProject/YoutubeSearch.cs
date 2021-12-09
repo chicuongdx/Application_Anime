@@ -85,11 +85,12 @@ namespace FinalProject
             }
         }
 
-        public SearchResult YourChoice;
         private void SearchReasult_Click(object sender, EventArgs e)
         {
-            YourChoice = ((YoutubeVideo)sender).YourChoice;
-            this.Close();
+            if ((YoutubeVideo)sender != null)
+            {
+                new PlayYoutube(((YoutubeVideo)sender).YourChoice).Show();
+            }
         }
         private async void DownloadVideo(object sender, EventArgs e)
         {

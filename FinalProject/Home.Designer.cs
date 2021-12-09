@@ -49,14 +49,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlAnime = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.lbView = new System.Windows.Forms.Label();
             this.lbNumMoive = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lbNumEp = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.flownlListFilm = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlPreview = new Guna.UI2.WinForms.Guna2Panel();
             this.lbName = new System.Windows.Forms.Label();
-            this.lbView = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbRating = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -200,7 +200,6 @@
             // 
             // btnStore
             // 
-            this.btnStore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStore.BackColor = System.Drawing.Color.Black;
             this.btnStore.BorderColor = System.Drawing.Color.DarkOrange;
             this.btnStore.BorderRadius = 10;
@@ -283,7 +282,7 @@
             // pctSearch
             // 
             this.pctSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pctSearch.BackgroundImage = global::FinalProject.Properties.Resources.search;
+            this.pctSearch.BackgroundImage = global::FinalProject.Properties.Resources.loupe;
             this.pctSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pctSearch.FillColor = System.Drawing.Color.Transparent;
             this.pctSearch.ImageRotate = 0F;
@@ -408,6 +407,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -459,6 +459,18 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Movie/OVA:";
             // 
+            // lbView
+            // 
+            this.lbView.AutoSize = true;
+            this.lbView.BackColor = System.Drawing.Color.Transparent;
+            this.lbView.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbView.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbView.Location = new System.Drawing.Point(634, 74);
+            this.lbView.Name = "lbView";
+            this.lbView.Size = new System.Drawing.Size(19, 21);
+            this.lbView.TabIndex = 1;
+            this.lbView.Text = "0";
+            // 
             // lbNumMoive
             // 
             this.lbNumMoive.AutoSize = true;
@@ -470,6 +482,18 @@
             this.lbNumMoive.Size = new System.Drawing.Size(19, 21);
             this.lbNumMoive.TabIndex = 11;
             this.lbNumMoive.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(536, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 21);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Lượt xem:";
             // 
             // lbNumEp
             // 
@@ -529,30 +553,6 @@
             this.lbName.Text = "Name";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbName.Click += new System.EventHandler(this.lbName_Click);
-            // 
-            // lbView
-            // 
-            this.lbView.AutoSize = true;
-            this.lbView.BackColor = System.Drawing.Color.Transparent;
-            this.lbView.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbView.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbView.Location = new System.Drawing.Point(634, 74);
-            this.lbView.Name = "lbView";
-            this.lbView.Size = new System.Drawing.Size(19, 21);
-            this.lbView.TabIndex = 1;
-            this.lbView.Text = "0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(536, 74);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 21);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Lượt xem:";
             // 
             // label2
             // 
@@ -621,6 +621,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1124, 682);
             this.Controls.Add(this.pnlApp);
             this.Controls.Add(this.pnlAll);
@@ -631,6 +632,7 @@
             this.Text = "Home";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
             this.Load += new System.EventHandler(this.Home_Load);
+            this.ClientSizeChanged += new System.EventHandler(this.Home_ClientSizeChanged);
             this.pnlATle.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).EndInit();

@@ -3,3 +3,4 @@
 {"username": "test1", "email": "test1@gmail.com", "password": "123"}
 {"username": "kynguyen", "email": "ndk1412@gmail.com", "password": "123"}
 {"username": "test5", "email": "test5@gmail.com", "password": "123"}
+{"username": "thecloudx130", "email": "chicuongdx2001@gmail.com", "password": "aneicer123"}

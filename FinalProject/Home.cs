@@ -30,10 +30,15 @@ namespace FinalProject
         public Home()
         {
             InitializeComponent();
-            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             Load_Data(DataFrame.DataSet);
             Login();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+
+        private void Home_ClientSizeChanged(object sender, EventArgs e)
+        {
+            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         public void Login()
@@ -77,7 +82,7 @@ namespace FinalProject
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //DataFrame.WriteExcel(Application.StartupPath + "\\Data.xlsx", DataFrame.DataSet);
+            DataFrame.WriteExcel(Application.StartupPath + "\\Data.xlsx", DataFrame.DataSet);
         }
 
         private void pnlTile_MouseMove(object sender, MouseEventArgs e)
@@ -178,14 +183,14 @@ namespace FinalProject
             Film film = (Film)sender;
             string s = "Name='" + film.lbName.Text + "'";
             DataRow row = DataFrame.DataSet.Select(s)[0];
-            OpenChildForm(new Describe(row), pnlAnime);
+            OpenChildForm(new Describe(row), pnlAll);
         }
 
         private void lbName_Click(object sender, EventArgs e)
         {
             string s = "Name='" + lbName.Text + "'";
             DataRow row = DataFrame.DataSet.Select(s)[0];
-            OpenChildForm(new Describe(row), pnlAnime);
+            OpenChildForm(new Describe(row), pnlAll);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -206,7 +211,7 @@ namespace FinalProject
 
             int idx = random.Next(limit);
             DataRow random_row = DataFrame.DataSet.Rows[idx];
-            OpenChildForm(new Describe(random_row), pnlAnime);
+            OpenChildForm(new Describe(random_row), pnlAll);
         }
 
         //preview
@@ -224,8 +229,24 @@ namespace FinalProject
         {
             OpenChildForm(new Store(), pnlAll);
         }
+        
+        //User
+        private void pctAvatar_Click(object sender, EventArgs e)
+        {
+            User userFrm = new User();
+            this.Visible = false;
+            userFrm.ShowDialog();
+            this.Visible = true;
+        }
 
-        //filter anime
+        //search and filter anime
+        private void OpenFilter(DataTable table)
+        {
+            Filter frmFilter = new Filter(table);
+            OpenChildForm(frmFilter, pnlAnime);
+            frmFilter.ClickInHome += ChoseFilm;
+        }
+
         private DataTable TakeTableFromFilter(DataTable table, List<List<string>> filter)
         {
             DataTable result = DataFrame.new_DataFilm();
@@ -242,7 +263,7 @@ namespace FinalProject
                         result.ImportRow(row);
                 }
             }
-    
+
             return result;
         }
 
@@ -250,7 +271,7 @@ namespace FinalProject
         {
             List<string> TypeFilm = DataFrame.getDataFromCol(DataFrame.DataSet, "Type");
             TypeFilm.RemoveAt(26);
-            List<string>  Studio = DataFrame.getDataFromCol(DataFrame.DataSet, "Studio");
+            List<string> Studio = DataFrame.getDataFromCol(DataFrame.DataSet, "Studio");
             Tuple<List<string>, List<string>> Season_Year = DataFrame.getSplitSeaseon(DataFrame.DataSet);
             FrmFilter chsType = new FrmFilter(TypeFilm, Studio, Season_Year);
             chsType.ShowDialog();
@@ -262,39 +283,15 @@ namespace FinalProject
                 chsType.lstChoseYear
             });
 
-            OpenChildForm(new Filter(lstChose), pnlAnime);
+            OpenFilter(lstChose);
         }
-        //User
-        private Image BrowersAvatar() //Avatar
+
+        private void pctSearch_Click(object sender, EventArgs e)
         {
-            OpenFileDialog fdlg = new OpenFileDialog();
-            fdlg.Title = "Brower Avatar";
-            fdlg.InitialDirectory = @"c:\";
-            fdlg.Filter = "All files (*.*)|*.*|All files (*.*)|*.*";
-            fdlg.FilterIndex = 2;
-            fdlg.RestoreDirectory = true;
-            if (fdlg.ShowDialog() == DialogResult.OK)
-            {
-                string url = fdlg.FileName.Replace("\\", "/");
-                try
-                {
-                    return cv2.imread(url);
-                }
-                catch { return null; }
-            }
-            return null;
+            DataTable table = SearchTable(txtSearch.Text);
+            OpenFilter(table);
         }
 
-        private void pctAvatar_Click(object sender, EventArgs e)
-        {
-            User userFrm = new User();
-            this.Visible = false;
-            userFrm.ShowDialog();
-            this.Visible = true;
-        }
-
-
-        //search
         private DataTable SearchTable(string s)
         {
             DataTable res = DataFrame.new_DataFilm();
@@ -308,31 +305,30 @@ namespace FinalProject
 
             return res;
         }
-        private void pctSearch_Click(object sender, EventArgs e)
-        {
-            DataTable table = SearchTable(txtSearch.Text);
-            OpenChildForm(new Filter(table), pnlAnime);
-        }
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 DataTable table = SearchTable(txtSearch.Text);
-                OpenChildForm(new Filter(table), pnlAnime);
+                Filter frmFilter = new Filter(table);
+                frmFilter.ClickInHome += ChoseFilm;
+                OpenFilter(table);
             }
-
         }
+
+        private void ChoseFilm(object sender, EventArgs e)
+        {
+            Filter frmFilter = (Filter)sender;
+            OpenChildForm(new Describe(frmFilter.YourChoice), pnlAll);
+        }
+
+        // youtube
 
         private void btnYoutube_Click(object sender, EventArgs e)
         {
             YoutubeSearch frmSearchY = new YoutubeSearch();
             frmSearchY.ShowDialog();
-
-            if (frmSearchY.YourChoice != null)
-            {
-                new PlayYoutube(frmSearchY.YourChoice).Show();
-            }
         }
     }
 }

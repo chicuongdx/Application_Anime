@@ -25,7 +25,7 @@ namespace FinalProject
             Load_Data();
         }
 
-        
+
         private void Load_Image()
         {
             Image preview;
@@ -33,7 +33,8 @@ namespace FinalProject
             try
             {
                 preview = cv2.imread(Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\preview.jfif");
-            }catch
+            }
+            catch
             {
                 preview = cv2.imread(Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\image.jfif");
             }
