@@ -106,5 +106,40 @@ namespace FinalProject
             this.Close();
             this.ParentForm.ForgetPassword();
         }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (this.txtUsername.Text == "" || this.txtPassword.Text == "")
+                {
+                    lbError.Text = "Chưa nhập đủ thông tin đăng nhập!";
+                    lbError.Visible = true;
+                }
+                else
+                {
+                    bool flag = false;
+                    foreach (var user in usersData)
+                    {
+                        if (txtUsername.Text == user.username && txtPassword.Text == user.password)
+                        {
+                            flag = true;
+                            UserData.currentUsername = user.username;
+                            UserData.currentEmail = user.email;
+                            UserData.currentPassword = user.password;
+                        }
+                    }
+                    if (flag)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        lbError.Text = "Tên đăng nhập hoặc mật khẩu không đúng!";
+                        lbError.Visible = true;
+                    }
+                }
+            }
+        }
     }
 }

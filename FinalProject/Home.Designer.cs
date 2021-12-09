@@ -62,6 +62,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlApp = new Guna.UI2.WinForms.Guna2Panel();
             this.pctIcon = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnlLoadAll = new System.Windows.Forms.Panel();
             this.pnlATle.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).BeginInit();
@@ -74,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctIcon)).BeginInit();
+            this.pnlLoadAll.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlATle
@@ -328,12 +330,11 @@
             this.pnlAll.BorderColor = System.Drawing.Color.Black;
             this.pnlAll.BorderRadius = 10;
             this.pnlAll.BorderThickness = 2;
-            this.pnlAll.Controls.Add(this.pnlOther);
-            this.pnlAll.Controls.Add(this.pnlAnime);
-            this.pnlAll.Location = new System.Drawing.Point(7, 110);
+            this.pnlAll.Controls.Add(this.pnlLoadAll);
+            this.pnlAll.Location = new System.Drawing.Point(7, 94);
             this.pnlAll.Name = "pnlAll";
             this.pnlAll.ShadowDecoration.Parent = this.pnlAll;
-            this.pnlAll.Size = new System.Drawing.Size(1110, 560);
+            this.pnlAll.Size = new System.Drawing.Size(1110, 576);
             this.pnlAll.TabIndex = 2;
             // 
             // pnlOther
@@ -343,9 +344,9 @@
             this.pnlOther.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlOther.Controls.Add(this.GpBoxRandom);
             this.pnlOther.Controls.Add(this.label1);
-            this.pnlOther.Location = new System.Drawing.Point(817, 11);
+            this.pnlOther.Location = new System.Drawing.Point(803, 3);
             this.pnlOther.Name = "pnlOther";
-            this.pnlOther.Size = new System.Drawing.Size(284, 537);
+            this.pnlOther.Size = new System.Drawing.Size(284, 548);
             this.pnlOther.TabIndex = 1;
             // 
             // GpBoxRandom
@@ -441,10 +442,10 @@
             this.pnlAnime.FillColor = System.Drawing.Color.WhiteSmoke;
             this.pnlAnime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlAnime.ForeColor = System.Drawing.Color.DarkOrange;
-            this.pnlAnime.Location = new System.Drawing.Point(11, 11);
+            this.pnlAnime.Location = new System.Drawing.Point(3, 3);
             this.pnlAnime.Name = "pnlAnime";
             this.pnlAnime.ShadowDecoration.Parent = this.pnlAnime;
-            this.pnlAnime.Size = new System.Drawing.Size(800, 537);
+            this.pnlAnime.Size = new System.Drawing.Size(794, 548);
             this.pnlAnime.TabIndex = 0;
             // 
             // label6
@@ -528,7 +529,7 @@
             this.flownlListFilm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.flownlListFilm.Location = new System.Drawing.Point(9, 274);
             this.flownlListFilm.Name = "flownlListFilm";
-            this.flownlListFilm.Size = new System.Drawing.Size(782, 254);
+            this.flownlListFilm.Size = new System.Drawing.Size(776, 265);
             this.flownlListFilm.TabIndex = 0;
             // 
             // pnlPreview
@@ -617,6 +618,18 @@
             this.pctIcon.TabIndex = 2;
             this.pctIcon.TabStop = false;
             // 
+            // pnlLoadAll
+            // 
+            this.pnlLoadAll.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlLoadAll.Controls.Add(this.pnlOther);
+            this.pnlLoadAll.Controls.Add(this.pnlAnime);
+            this.pnlLoadAll.Location = new System.Drawing.Point(7, 9);
+            this.pnlLoadAll.Name = "pnlLoadAll";
+            this.pnlLoadAll.Size = new System.Drawing.Size(1096, 554);
+            this.pnlLoadAll.TabIndex = 2;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -647,6 +660,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlApp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctIcon)).EndInit();
+            this.pnlLoadAll.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -686,5 +700,6 @@
         private System.Windows.Forms.Label lbNumEp;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button btnYoutube;
+        private System.Windows.Forms.Panel pnlLoadAll;
     }
 }

@@ -183,14 +183,14 @@ namespace FinalProject
             Film film = (Film)sender;
             string s = "Name='" + film.lbName.Text + "'";
             DataRow row = DataFrame.DataSet.Select(s)[0];
-            OpenChildForm(new Describe(row), pnlAll);
+            OpenChildForm(new Describe(row), pnlLoadAll);
         }
 
         private void lbName_Click(object sender, EventArgs e)
         {
             string s = "Name='" + lbName.Text + "'";
             DataRow row = DataFrame.DataSet.Select(s)[0];
-            OpenChildForm(new Describe(row), pnlAll);
+            OpenChildForm(new Describe(row), pnlLoadAll);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -211,7 +211,7 @@ namespace FinalProject
 
             int idx = random.Next(limit);
             DataRow random_row = DataFrame.DataSet.Rows[idx];
-            OpenChildForm(new Describe(random_row), pnlAll);
+            OpenChildForm(new Describe(random_row), pnlLoadAll);
         }
 
         //preview
@@ -227,7 +227,7 @@ namespace FinalProject
         //store film
         private void btnStore_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Store(), pnlAll);
+            OpenChildForm(new Store(), pnlLoadAll);
         }
         
         //User
@@ -237,6 +237,8 @@ namespace FinalProject
             this.Visible = false;
             userFrm.ShowDialog();
             this.Visible = true;
+            string path_avatar = userFrm.path_avatar;
+            pctAvatar.Image = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
         }
 
         //search and filter anime
@@ -320,7 +322,7 @@ namespace FinalProject
         private void ChoseFilm(object sender, EventArgs e)
         {
             Filter frmFilter = (Filter)sender;
-            OpenChildForm(new Describe(frmFilter.YourChoice), pnlAll);
+            OpenChildForm(new Describe(frmFilter.YourChoice), pnlLoadAll);
         }
 
         // youtube
