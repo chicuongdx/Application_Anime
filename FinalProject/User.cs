@@ -33,15 +33,16 @@ namespace FinalProject
             pictureBox1.Region = rg;
         }
 
+        public string path_avatar;
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
             if (open.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.BackgroundImage = new Bitmap(open.FileName);
-                pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+                pictureBox1.Image = cv2.resize(cv2.imread(open.FileName), new Size(pictureBox1.Width, pictureBox1.Height));
             }
+            path_avatar = open.FileName;
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
