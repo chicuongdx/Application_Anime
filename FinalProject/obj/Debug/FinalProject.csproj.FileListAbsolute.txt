@@ -243,3 +243,4 @@ D:\CLOUDX\Courses\Nam3\C#\github\Application_Anime\FinalProject\obj\Debug\FinalP
 D:\CLOUDX\Courses\Nam3\C#\github\Application_Anime\FinalProject\obj\Debug\FinalProject.exe
 D:\CLOUDX\Courses\Nam3\C#\github\Application_Anime\FinalProject\obj\Debug\FinalProject.pdb
 D:\CLOUDX\Courses\Nam3\C#\github\Application_Anime\FinalProject\obj\Debug\FinalProject.Comment.resources
+D:\Workspace\Application_Anime\FinalProject\obj\Debug\FinalProject.Comment.resources
