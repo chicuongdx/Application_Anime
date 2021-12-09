@@ -28,7 +28,7 @@ namespace FinalProject
 
         string[] strData;
         List<UserData> usersData = new List<UserData>();
-        string url = Application.StartupPath + "\\User.txt";
+        string url = Application.StartupPath + "\\User\\User.txt";
         public Home ParentForm { get; set; }
 
         public Login()
