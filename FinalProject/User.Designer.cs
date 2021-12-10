@@ -108,6 +108,7 @@ namespace FinalProject
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(161, 12);
             this.txtUsername.Name = "txtUsername";
+            this.txtUsername.ReadOnly = true;
             this.txtUsername.Size = new System.Drawing.Size(165, 26);
             this.txtUsername.TabIndex = 90;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
@@ -127,7 +128,6 @@ namespace FinalProject
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pnlChangePass);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.txtEmail);
@@ -147,7 +147,7 @@ namespace FinalProject
             this.pnlChangePass.Controls.Add(this.label5);
             this.pnlChangePass.Controls.Add(this.txtOldPass);
             this.pnlChangePass.Controls.Add(this.label6);
-            this.pnlChangePass.Location = new System.Drawing.Point(3, 0);
+            this.pnlChangePass.Location = new System.Drawing.Point(85, 183);
             this.pnlChangePass.Name = "pnlChangePass";
             this.pnlChangePass.Size = new System.Drawing.Size(347, 209);
             this.pnlChangePass.TabIndex = 92;
@@ -258,6 +258,7 @@ namespace FinalProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(521, 407);
+            this.Controls.Add(this.pnlChangePass);
             this.Controls.Add(this.lbError);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);

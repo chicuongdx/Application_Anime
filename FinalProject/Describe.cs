@@ -82,6 +82,10 @@ namespace FinalProject
 
         private void lbWatch_Click(object sender, EventArgs e)
         {
+            //add to data history
+            DataFrame.History.Add(lbName.Text)
+;           
+            //load form
             int idx = DataFrame.DataSet.Rows.IndexOf(row);
             int view = Convert.ToInt32(row["View"]) + 1;
 
@@ -205,7 +209,7 @@ namespace FinalProject
                 double newRating = (ratingAll + 1.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
                 //change data
                 int idx = DataFrame.DataSet.Rows.IndexOf(row);
-                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["Rating"] = Math.Round(newRating, 2);
                 DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
                 LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
 
@@ -237,7 +241,7 @@ namespace FinalProject
                 double newRating = (ratingAll + 2.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
                 //change data
                 int idx = DataFrame.DataSet.Rows.IndexOf(row);
-                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["Rating"] = Math.Round(newRating, 2);
                 DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
                 LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
                 string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
@@ -268,7 +272,7 @@ namespace FinalProject
                 double newRating = (ratingAll + 3.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
                 //change data
                 int idx = DataFrame.DataSet.Rows.IndexOf(row);
-                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["Rating"] = Math.Round(newRating, 2);
                 DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
                 LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
                 string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
@@ -299,7 +303,7 @@ namespace FinalProject
                 double newRating = (ratingAll + 4.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
                 //change data
                 int idx = DataFrame.DataSet.Rows.IndexOf(row);
-                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["Rating"] = Math.Round(newRating, 2);
                 DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
                 LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
                 string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
@@ -330,7 +334,7 @@ namespace FinalProject
                 double newRating = (ratingAll + 5.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
                 //change data
                 int idx = DataFrame.DataSet.Rows.IndexOf(row);
-                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["Rating"] = Math.Round(newRating, 2);
                 DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
                 LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
                 string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
@@ -361,7 +365,7 @@ namespace FinalProject
                 double newRating = (ratingAll + 6.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
                 //change data
                 int idx = DataFrame.DataSet.Rows.IndexOf(row);
-                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["Rating"] = Math.Round(newRating, 2);
                 DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
                 LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
                 string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
@@ -392,7 +396,7 @@ namespace FinalProject
                 double newRating = (ratingAll + 7.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
                 //change data
                 int idx = DataFrame.DataSet.Rows.IndexOf(row);
-                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["Rating"] = Math.Round(newRating, 2);
                 DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
                 LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
                 string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
@@ -423,7 +427,7 @@ namespace FinalProject
                 double newRating = (ratingAll + 8.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
                 //change data
                 int idx = DataFrame.DataSet.Rows.IndexOf(row);
-                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["Rating"] = Math.Round(newRating, 2);
                 DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
                 LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
                 string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
@@ -454,7 +458,7 @@ namespace FinalProject
                 double newRating = (ratingAll + 9.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
                 //change data
                 int idx = DataFrame.DataSet.Rows.IndexOf(row);
-                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["Rating"] = Math.Round(newRating, 2);
                 DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
                 LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
                 string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
@@ -485,7 +489,7 @@ namespace FinalProject
                 double newRating = (ratingAll + 10.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
                 //change data
                 int idx = DataFrame.DataSet.Rows.IndexOf(row);
-                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["Rating"] = Math.Round(newRating, 2);
                 DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
                 LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
                 string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";

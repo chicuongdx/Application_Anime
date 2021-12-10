@@ -34,13 +34,15 @@ namespace FinalProject
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbCtrlStore = new Guna.UI2.WinForms.Guna2TabControl();
             this.tbPageLib = new System.Windows.Forms.TabPage();
+            this.gridViewLib = new Guna.UI2.WinForms.Guna2DataGridView();
             this.flowPnlButton = new System.Windows.Forms.FlowLayoutPanel();
             this.tbPageYours = new System.Windows.Forms.TabPage();
             this.tbHistory = new System.Windows.Forms.TabPage();
-            this.gridViewLib = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.flowPnlHistory = new System.Windows.Forms.FlowLayoutPanel();
             this.tbCtrlStore.SuspendLayout();
             this.tbPageLib.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLib)).BeginInit();
+            this.tbHistory.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbCtrlStore
@@ -85,33 +87,6 @@ namespace FinalProject
             this.tbPageLib.TabIndex = 0;
             this.tbPageLib.Text = "Thư viện phim";
             this.tbPageLib.UseVisualStyleBackColor = true;
-            // 
-            // flowPnlButton
-            // 
-            this.flowPnlButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowPnlButton.Location = new System.Drawing.Point(3, 3);
-            this.flowPnlButton.Name = "flowPnlButton";
-            this.flowPnlButton.Size = new System.Drawing.Size(808, 34);
-            this.flowPnlButton.TabIndex = 0;
-            // 
-            // tbPageYours
-            // 
-            this.tbPageYours.Location = new System.Drawing.Point(4, 44);
-            this.tbPageYours.Name = "tbPageYours";
-            this.tbPageYours.Padding = new System.Windows.Forms.Padding(3);
-            this.tbPageYours.Size = new System.Drawing.Size(814, 401);
-            this.tbPageYours.TabIndex = 1;
-            this.tbPageYours.Text = "Kho của bạn";
-            this.tbPageYours.UseVisualStyleBackColor = true;
-            // 
-            // tbHistory
-            // 
-            this.tbHistory.Location = new System.Drawing.Point(4, 44);
-            this.tbHistory.Name = "tbHistory";
-            this.tbHistory.Size = new System.Drawing.Size(814, 401);
-            this.tbHistory.TabIndex = 2;
-            this.tbHistory.Text = "Lịch sử xem phim";
-            this.tbHistory.UseVisualStyleBackColor = true;
             // 
             // gridViewLib
             // 
@@ -172,6 +147,42 @@ namespace FinalProject
             this.gridViewLib.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridViewLib.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // flowPnlButton
+            // 
+            this.flowPnlButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowPnlButton.Location = new System.Drawing.Point(3, 3);
+            this.flowPnlButton.Name = "flowPnlButton";
+            this.flowPnlButton.Size = new System.Drawing.Size(808, 34);
+            this.flowPnlButton.TabIndex = 0;
+            // 
+            // tbPageYours
+            // 
+            this.tbPageYours.Location = new System.Drawing.Point(4, 44);
+            this.tbPageYours.Name = "tbPageYours";
+            this.tbPageYours.Padding = new System.Windows.Forms.Padding(3);
+            this.tbPageYours.Size = new System.Drawing.Size(814, 401);
+            this.tbPageYours.TabIndex = 1;
+            this.tbPageYours.Text = "Kho của bạn";
+            this.tbPageYours.UseVisualStyleBackColor = true;
+            // 
+            // tbHistory
+            // 
+            this.tbHistory.Controls.Add(this.flowPnlHistory);
+            this.tbHistory.Location = new System.Drawing.Point(4, 44);
+            this.tbHistory.Name = "tbHistory";
+            this.tbHistory.Size = new System.Drawing.Size(814, 401);
+            this.tbHistory.TabIndex = 2;
+            this.tbHistory.Text = "Lịch sử xem phim";
+            this.tbHistory.UseVisualStyleBackColor = true;
+            // 
+            // flowPnlHistory
+            // 
+            this.flowPnlHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowPnlHistory.Location = new System.Drawing.Point(0, 0);
+            this.flowPnlHistory.Name = "flowPnlHistory";
+            this.flowPnlHistory.Size = new System.Drawing.Size(814, 401);
+            this.flowPnlHistory.TabIndex = 0;
+            // 
             // Store
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +194,7 @@ namespace FinalProject
             this.tbCtrlStore.ResumeLayout(false);
             this.tbPageLib.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLib)).EndInit();
+            this.tbHistory.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -195,5 +207,6 @@ namespace FinalProject
         private System.Windows.Forms.TabPage tbHistory;
         private System.Windows.Forms.FlowLayoutPanel flowPnlButton;
         private Guna.UI2.WinForms.Guna2DataGridView gridViewLib;
+        private System.Windows.Forms.FlowLayoutPanel flowPnlHistory;
     }
 }
