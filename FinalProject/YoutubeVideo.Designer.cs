@@ -110,6 +110,7 @@ namespace FinalProject
             this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(35, 35);
             this.btnAdd.TabIndex = 3;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Thumbnail
             // 

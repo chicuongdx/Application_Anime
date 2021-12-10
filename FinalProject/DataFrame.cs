@@ -191,6 +191,38 @@ namespace FinalProject
         public static List<string> History;
 
         //Data my store
-
+        public static List<string> ReadMyStore()
+        {
+            List<string> res = new List<string>();
+            string path = Application.StartupPath + "\\History\\" + UserData.currentUsername + ".txt";
+            if (!File.Exists(path))
+            {
+                using (var tw = new StreamWriter(path, true))
+                {
+                    tw.WriteLine();
+                }
+            }
+            string[] readfile = File.ReadAllLines(path);
+            foreach (string s in readfile)
+            {
+                if (s != "")
+                {
+                    res.Add(s);
+                }
+            }
+            return res;
+        }
+        public static void WriteMyStore()
+        {
+            string path = Application.StartupPath + "\\History\\" + UserData.currentUsername + ".txt";
+            foreach (string name in History)
+            {
+                using (StreamWriter sr = new StreamWriter(path))
+                {
+                    sr.WriteLine(name);
+                }
+            }
+        }
+        public static List<string> MyStore;
     }
 }
