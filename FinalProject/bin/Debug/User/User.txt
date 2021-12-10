@@ -4,4 +4,3 @@
 {"username": "test5", "email": "test5@gmail.com", "password": "12345678"}
 {"username": "thecloudx130", "email": "chicuongdx2001@gmail.com", "password": "123"}
 {"username": "kynguyen", "email": "ndk1412@gmail.com", "password": "12345678"}
-{"username": "kynguyen", "email": "ndk@gmail.com", "password": "12345678"}
