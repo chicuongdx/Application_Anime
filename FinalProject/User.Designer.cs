@@ -35,7 +35,6 @@ namespace FinalProject
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlChangePass = new System.Windows.Forms.Panel();
@@ -48,6 +47,7 @@ namespace FinalProject
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbError = new System.Windows.Forms.Label();
+            this.lbUsername = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlChangePass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -90,9 +90,9 @@ namespace FinalProject
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(22, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 20);
+            this.label4.Size = new System.Drawing.Size(109, 20);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Tên đăng nhập:";
+            this.label4.Text = "Tên tài khoản:";
             // 
             // txtEmail
             // 
@@ -101,16 +101,6 @@ namespace FinalProject
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(165, 26);
             this.txtEmail.TabIndex = 100;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(161, 12);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(165, 26);
-            this.txtUsername.TabIndex = 90;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // btnLogin
             // 
@@ -127,9 +117,8 @@ namespace FinalProject
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pnlChangePass);
+            this.panel1.Controls.Add(this.lbUsername);
             this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label1);
@@ -147,7 +136,7 @@ namespace FinalProject
             this.pnlChangePass.Controls.Add(this.label5);
             this.pnlChangePass.Controls.Add(this.txtOldPass);
             this.pnlChangePass.Controls.Add(this.label6);
-            this.pnlChangePass.Location = new System.Drawing.Point(3, 0);
+            this.pnlChangePass.Location = new System.Drawing.Point(85, 186);
             this.pnlChangePass.Name = "pnlChangePass";
             this.pnlChangePass.Size = new System.Drawing.Size(347, 209);
             this.pnlChangePass.TabIndex = 92;
@@ -252,12 +241,23 @@ namespace FinalProject
             this.lbError.TabIndex = 93;
             this.lbError.Text = "Mật khấu không đúng!";
             // 
+            // lbUsername
+            // 
+            this.lbUsername.AutoSize = true;
+            this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsername.Location = new System.Drawing.Point(162, 15);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.Size = new System.Drawing.Size(101, 20);
+            this.lbUsername.TabIndex = 101;
+            this.lbUsername.Text = "tên tài khoản";
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(521, 407);
+            this.Controls.Add(this.pnlChangePass);
             this.Controls.Add(this.lbError);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
@@ -287,7 +287,6 @@ namespace FinalProject
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
@@ -299,5 +298,6 @@ namespace FinalProject
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label lbError;
+        private System.Windows.Forms.Label lbUsername;
     }
 }

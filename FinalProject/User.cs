@@ -41,7 +41,7 @@ namespace FinalProject
             gp.AddEllipse(0, 0, pictureBox1.Width - 5, pictureBox1.Height - 5);
             Region rg = new Region(gp);
             pictureBox1.Region = rg;
-            txtUsername.Text = UserData.currentUsername;
+            lbUsername.Text = UserData.currentUsername;
             txtEmail.Text = UserData.currentEmail;
             strData = File.ReadAllLines(url);
             foreach (string line in strData)
@@ -86,25 +86,20 @@ namespace FinalProject
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text != UserData.currentUsername || txtEmail.Text != UserData.currentEmail)
+            if (txtEmail.Text != UserData.currentEmail)
             {
                 string pattern = "[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+";
                 if (Regex.IsMatch(txtEmail.Text, pattern))
                 {
-                    bool flagUsername = false;
                     bool flagEmail = false;
                     foreach (var user in usersData)
                     {
-                        if (txtUsername.Text == user.username)
-                        {
-                            flagUsername = true;
-                        }
                         if (txtEmail.Text == user.email)
                         {
                             flagEmail = true;
                         }
                     }
-                    if (!flagUsername || !flagEmail)
+                    if (!flagEmail)
                     {
                         var tempFile = Path.GetTempFileName();
                         string rm = "{\"username\": \"" + UserData.currentUsername + "\", \"email\": \"" + UserData.currentEmail + "\", \"password\": \"" + UserData.currentPassword + "\"}";
@@ -114,23 +109,15 @@ namespace FinalProject
 
                         File.Delete(url);
                         File.Move(tempFile, url);
-                        string cr = "{\"username\": \"" + txtUsername.Text + "\", \"email\": \"" + txtEmail.Text + "\", \"password\": \"" + UserData.currentPassword + "\"}";
+                        string cr = "{\"username\": \"" + UserData.currentUsername + "\", \"email\": \"" + txtEmail.Text + "\", \"password\": \"" + UserData.currentPassword + "\"}";
                         using (StreamWriter sr = File.AppendText(url))
                         {
                             sr.WriteLine(cr);
                         }
-                        UserData.currentUsername = txtUsername.Text;
                         UserData.currentEmail = txtEmail.Text;
                         lbError.Text = "Cập nhật thông tin thành công!";
                         lbError.Visible = true;
                         lbError.ForeColor = Color.Green;
-                    }
-                    else if (flagUsername)
-                    {
-                        lbError.Text = "Tên tài khoản đã tồn tại!";
-                        lbError.Visible = true;
-                        lbError.ForeColor = Color.Red;
-
                     }
                     else if (flagEmail)
                     {
@@ -157,6 +144,8 @@ namespace FinalProject
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             pnlChangePass.Visible = true;
+            txtOldPass.Text = "";
+            txtNewPass.Text = "";
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -166,8 +155,6 @@ namespace FinalProject
                 lbError.Text = "Mật khẩu cũ không đúng!";
                 lbError.Visible = true;
                 lbError.ForeColor = Color.Red;
-                txtOldPass.Text = "";
-                txtNewPass.Text = "";
                 pnlChangePass.Visible = false;
             }
             else if (txtNewPass.Text == "")
@@ -175,8 +162,6 @@ namespace FinalProject
                 lbError.Text = "Chưa nhập mật khẩu mới!";
                 lbError.Visible = true;
                 lbError.ForeColor = Color.Red;
-                txtOldPass.Text = "";
-                txtNewPass.Text = "";
                 pnlChangePass.Visible = false;
             }
             else
@@ -186,18 +171,11 @@ namespace FinalProject
                 lbError.Text = "Đổi mật khẩu thành công!";
                 lbError.Visible = true;
                 lbError.ForeColor = Color.Green;
-                txtOldPass.Text = "";
-                txtNewPass.Text = "";
                 pnlChangePass.Visible = false;
             }
         }
 
         private void txtOldPass_TextChanged(object sender, EventArgs e)
-        {
-            lbError.Visible = false;
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
         {
             lbError.Visible = false;
         }
