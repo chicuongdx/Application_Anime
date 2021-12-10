@@ -542,5 +542,11 @@
   <ItemGroup>
     <None Include="Resources\noavatar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow-star.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

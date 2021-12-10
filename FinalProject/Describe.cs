@@ -39,12 +39,6 @@ namespace FinalProject
             lbUserName.Text = UserData.currentUsername;
         }
 
-        private void Describe_ClientSizeChanged(object sender, EventArgs e)
-        {
-            Load_Data();
-        }
-
-
         private void Load_Image()
         {
             Image preview;
@@ -75,12 +69,15 @@ namespace FinalProject
             lbSeason.Text = row["Season"].ToString();
             lbView.Text = string.Format("{0:N}", Convert.ToInt32(row["View"])).Replace(".00", "");
             lbNumEp.Text = row["NumEp"].ToString() + " Tập";
-            lbNumEp.Text = row["NumMovie"].ToString() + " Tập";
+            lbNumMoive.Text = row["NumMovie"].ToString() + " Tập";
         }
         private void Load_Data()
         {
             Load_Image();
             Load_Name();
+            LoadStar(Convert.ToDouble(row["Rating"]).ToString(), row["NumRating"].ToString());
+            LoadStarImage();
+            FileRate();
         }
 
         private void lbWatch_Click(object sender, EventArgs e)
@@ -151,5 +148,354 @@ namespace FinalProject
                 txtWriteCmt.Text = "";
             }
         }
+
+        //star
+        List<string> dataRate = new List<string>();
+        private void FileRate()
+        {
+            string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
+            if (!File.Exists(path))
+            {
+                using (var tw = new StreamWriter(path, true))
+                {
+                    tw.WriteLine();
+                }
+            }
+            string s = File.ReadAllText(path).Trim();
+            dataRate = s.Split('\n').OfType<string>().ToList();
+        }
+
+        private void LoadStar(string rating, string num)
+        {
+            double review = Convert.ToDouble(rating);
+            review = Math.Round(review, 2);
+            lbStar.Text = review.ToString();
+            lbNumRating.Text = "Phim được đánh giá " + review.ToString() + "/10 từ " + num + " người";
+        }
+        private void LoadStarImage()
+        {
+            pctStar1.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+            pctStar2.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+            pctStar3.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+            pctStar4.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+            pctStar5.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+            pctStar6.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+            pctStar7.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+            pctStar8.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+            pctStar9.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+            pctStar10.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+        }
+
+        private void pctStar1_Click(object sender, EventArgs e)
+        {
+            if (!dataRate.Contains(UserData.currentUsername))
+            {
+                pctStar1.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar2.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar3.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar4.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar5.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar6.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar7.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar8.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar9.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar10.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                //data
+                double ratingAll = Convert.ToDouble(row["Rating"]) * Convert.ToDouble(row["NumRating"]);
+                double newRating = (ratingAll + 1.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
+                //change data
+                int idx = DataFrame.DataSet.Rows.IndexOf(row);
+                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
+                LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
+
+                string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
+                using (StreamWriter sr = File.AppendText(path))
+                {
+                    sr.WriteLine(UserData.currentUsername);
+                    dataRate.Add(UserData.currentUsername);
+                }
+            }
+        }
+
+        private void pctStar2_Click(object sender, EventArgs e)
+        {
+            if (!dataRate.Contains(UserData.currentUsername))
+            {
+                pctStar1.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar2.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar3.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar4.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar5.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar6.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar7.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar8.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar9.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar10.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                //data
+                double ratingAll = Convert.ToDouble(row["Rating"]) * Convert.ToDouble(row["NumRating"]);
+                double newRating = (ratingAll + 2.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
+                //change data
+                int idx = DataFrame.DataSet.Rows.IndexOf(row);
+                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
+                LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
+                string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
+                using (StreamWriter sr = File.AppendText(path))
+                {
+                    sr.WriteLine(UserData.currentUsername);
+                    dataRate.Add(UserData.currentUsername);
+                }
+            }
+        }
+
+        private void pctStar3_Click(object sender, EventArgs e)
+        {
+            if (!dataRate.Contains(UserData.currentUsername))
+            {
+                pctStar1.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar2.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar3.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar4.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar5.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar6.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar7.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar8.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar9.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar10.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                //data
+                double ratingAll = Convert.ToDouble(row["Rating"]) * Convert.ToDouble(row["NumRating"]);
+                double newRating = (ratingAll + 3.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
+                //change data
+                int idx = DataFrame.DataSet.Rows.IndexOf(row);
+                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
+                LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
+                string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
+                using (StreamWriter sr = File.AppendText(path))
+                {
+                    sr.WriteLine(UserData.currentUsername);
+                    dataRate.Add(UserData.currentUsername);
+                }
+            }
+        }
+
+        private void pctStar4_Click(object sender, EventArgs e)
+        {
+            if (!dataRate.Contains(UserData.currentUsername))
+            {
+                pctStar1.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar2.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar3.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar4.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar5.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar6.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar7.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar8.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar9.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar10.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                //data
+                double ratingAll = Convert.ToDouble(row["Rating"]) * Convert.ToDouble(row["NumRating"]);
+                double newRating = (ratingAll + 4.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
+                //change data
+                int idx = DataFrame.DataSet.Rows.IndexOf(row);
+                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
+                LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
+                string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
+                using (StreamWriter sr = File.AppendText(path))
+                {
+                    sr.WriteLine(UserData.currentUsername);
+                    dataRate.Add(UserData.currentUsername);
+                }
+            }
+        }
+
+        private void pctStar5_Click(object sender, EventArgs e)
+        {
+            if (!dataRate.Contains(UserData.currentUsername))
+            {
+                pctStar1.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar2.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar3.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar4.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar5.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar6.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar7.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar8.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar9.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar10.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                //data
+                double ratingAll = Convert.ToDouble(row["Rating"]) * Convert.ToDouble(row["NumRating"]);
+                double newRating = (ratingAll + 5.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
+                //change data
+                int idx = DataFrame.DataSet.Rows.IndexOf(row);
+                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
+                LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
+                string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
+                using (StreamWriter sr = File.AppendText(path))
+                {
+                    sr.WriteLine(UserData.currentUsername);
+                    dataRate.Add(UserData.currentUsername);
+                }
+            }
+        }
+
+        private void pctStar6_Click(object sender, EventArgs e)
+        {
+            if (!dataRate.Contains(UserData.currentUsername))
+            {
+                pctStar1.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar2.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar3.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar4.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar5.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar6.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar7.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar8.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar9.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar10.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                //data
+                double ratingAll = Convert.ToDouble(row["Rating"]) * Convert.ToDouble(row["NumRating"]);
+                double newRating = (ratingAll + 6.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
+                //change data
+                int idx = DataFrame.DataSet.Rows.IndexOf(row);
+                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
+                LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
+                string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
+                using (StreamWriter sr = File.AppendText(path))
+                {
+                    sr.WriteLine(UserData.currentUsername);
+                    dataRate.Add(UserData.currentUsername);
+                }
+            }
+        }
+
+        private void pctStar7_Click(object sender, EventArgs e)
+        {
+            if (!dataRate.Contains(UserData.currentUsername))
+            {
+                pctStar1.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar2.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar3.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar4.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar5.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar6.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar7.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar8.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar9.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar10.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                //data
+                double ratingAll = Convert.ToDouble(row["Rating"]) * Convert.ToDouble(row["NumRating"]);
+                double newRating = (ratingAll + 7.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
+                //change data
+                int idx = DataFrame.DataSet.Rows.IndexOf(row);
+                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
+                LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
+                string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
+                using (StreamWriter sr = File.AppendText(path))
+                {
+                    sr.WriteLine(UserData.currentUsername);
+                    dataRate.Add(UserData.currentUsername);
+                }
+            }
+        }
+
+        private void pctStar8_Click(object sender, EventArgs e)
+        {
+            if (!dataRate.Contains(UserData.currentUsername))
+            {
+                pctStar1.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar2.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar3.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar4.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar5.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar6.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar7.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar8.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar9.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                pctStar10.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                //data
+                double ratingAll = Convert.ToDouble(row["Rating"]) * Convert.ToDouble(row["NumRating"]);
+                double newRating = (ratingAll + 8.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
+                //change data
+                int idx = DataFrame.DataSet.Rows.IndexOf(row);
+                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
+                LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
+                string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
+                using (StreamWriter sr = File.AppendText(path))
+                {
+                    sr.WriteLine(UserData.currentUsername);
+                    dataRate.Add(UserData.currentUsername);
+                }
+            }
+        }
+
+        private void pctStar9_Click(object sender, EventArgs e)
+        {
+            if (!dataRate.Contains(UserData.currentUsername))
+            {
+                pctStar1.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar2.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar3.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar4.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar5.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar6.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar7.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar8.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar9.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar10.Image = cv2.resize(Properties.Resources.white_star, new Size(20, 20));
+                //data
+                double ratingAll = Convert.ToDouble(row["Rating"]) * Convert.ToDouble(row["NumRating"]);
+                double newRating = (ratingAll + 9.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
+                //change data
+                int idx = DataFrame.DataSet.Rows.IndexOf(row);
+                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
+                LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
+                string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
+                using (StreamWriter sr = File.AppendText(path))
+                {
+                    sr.WriteLine(UserData.currentUsername);
+                    dataRate.Add(UserData.currentUsername);
+                }
+            }
+        }
+
+        private void pctStar10_Click(object sender, EventArgs e)
+        {
+            if (!dataRate.Contains(UserData.currentUsername))
+            {
+                pctStar1.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar2.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar3.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar4.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar5.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar6.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar7.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar8.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar9.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                pctStar10.Image = cv2.resize(Properties.Resources.yellow_star, new Size(20, 20));
+                //data
+                double ratingAll = Convert.ToDouble(row["Rating"]) * Convert.ToDouble(row["NumRating"]);
+                double newRating = (ratingAll + 10.0) / (Convert.ToDouble(row["NumRating"]) + 1.0);
+                //change data
+                int idx = DataFrame.DataSet.Rows.IndexOf(row);
+                DataFrame.DataSet.Rows[idx]["Rating"] = newRating;
+                DataFrame.DataSet.Rows[idx]["NumRating"] = Convert.ToInt32(row["NumRating"]) + 1;
+                LoadStar(newRating.ToString(), (Convert.ToInt32(row["NumRating"])).ToString());
+                string path = Application.StartupPath + "\\View\\" + row["Name"].ToString() + "\\Rate.txt";
+                using (StreamWriter sr = File.AppendText(path))
+                {
+                    sr.WriteLine(UserData.currentUsername);
+                    dataRate.Add(UserData.currentUsername);
+                }
+            }
+        }
+        // add to my store
     }
 }
