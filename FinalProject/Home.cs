@@ -247,11 +247,15 @@ namespace FinalProject
             this.Visible = false;
             userFrm.ShowDialog();
             this.Visible = true;
-            string path_avatar = userFrm.path_avatar;
-            pctAvatar.Image = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
-            string path_save = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
-            if(File.Exists(path_save))
-                File.Copy(path_avatar, path_save);
+            try
+            {
+                string path_avatar = userFrm.path_avatar;
+                pctAvatar.Image = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
+                string path_save = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
+                if (File.Exists(path_save))
+                    File.Copy(path_avatar, path_save);
+            }
+            catch { }
         }
 
         //search and filter anime
