@@ -33,9 +33,9 @@ namespace FinalProject
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbView = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbName = new System.Windows.Forms.Label();
-            this.btnRate = new Guna.UI2.WinForms.Guna2Button();
             this.pctImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pctRemove = new System.Windows.Forms.PictureBox();
+            this.btnRate = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pctImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctRemove)).BeginInit();
             this.SuspendLayout();
@@ -81,42 +81,11 @@ namespace FinalProject
             this.lbName.Click += new System.EventHandler(this.lbName_Click);
             this.lbName.MouseHover += new System.EventHandler(this.lbName_MouseHover);
             // 
-            // btnRate
-            // 
-            this.btnRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRate.BackColor = System.Drawing.Color.Transparent;
-            this.btnRate.BorderColor = System.Drawing.Color.DarkOrange;
-            this.btnRate.BorderRadius = 10;
-            this.btnRate.BorderThickness = 1;
-            this.btnRate.CheckedState.Parent = this.btnRate;
-            this.btnRate.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btnRate.CustomImages.Parent = this.btnRate;
-            this.btnRate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRate.DisabledState.Parent = this.btnRate;
-            this.btnRate.Enabled = false;
-            this.btnRate.FillColor = System.Drawing.Color.Black;
-            this.btnRate.FocusedColor = System.Drawing.Color.DarkOrange;
-            this.btnRate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRate.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnRate.HoverState.Parent = this.btnRate;
-            this.btnRate.Image = global::FinalProject.Properties.Resources.star;
-            this.btnRate.Location = new System.Drawing.Point(0, 0);
-            this.btnRate.Name = "btnRate";
-            this.btnRate.PressedColor = System.Drawing.Color.DarkOrange;
-            this.btnRate.ShadowDecoration.Parent = this.btnRate;
-            this.btnRate.Size = new System.Drawing.Size(52, 25);
-            this.btnRate.TabIndex = 4;
-            this.btnRate.Text = "0.0";
-            // 
             // pctImage
             // 
             this.pctImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pctImage.BackgroundImage")));
             this.pctImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pctImage.BorderRadius = 15;
-            this.pctImage.Dock = System.Windows.Forms.DockStyle.Top;
             this.pctImage.FillColor = System.Drawing.Color.Transparent;
             this.pctImage.ImageRotate = 0F;
             this.pctImage.Location = new System.Drawing.Point(0, 0);
@@ -141,14 +110,40 @@ namespace FinalProject
             this.pctRemove.Visible = false;
             this.pctRemove.Click += new System.EventHandler(this.pctRemove_Click);
             // 
+            // btnRate
+            // 
+            this.btnRate.BackColor = System.Drawing.Color.Transparent;
+            this.btnRate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnRate.BorderRadius = 15;
+            this.btnRate.BorderThickness = 1;
+            this.btnRate.CheckedState.Parent = this.btnRate;
+            this.btnRate.CustomBorderColor = System.Drawing.Color.White;
+            this.btnRate.CustomImages.Parent = this.btnRate;
+            this.btnRate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRate.DisabledState.Parent = this.btnRate;
+            this.btnRate.FillColor = System.Drawing.Color.Black;
+            this.btnRate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnRate.HoverState.Parent = this.btnRate;
+            this.btnRate.Image = global::FinalProject.Properties.Resources.star;
+            this.btnRate.Location = new System.Drawing.Point(0, 0);
+            this.btnRate.Name = "btnRate";
+            this.btnRate.ShadowDecoration.Parent = this.btnRate;
+            this.btnRate.Size = new System.Drawing.Size(68, 33);
+            this.btnRate.TabIndex = 36;
+            this.btnRate.Text = "0.0";
+            // 
             // Film
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.btnRate);
             this.Controls.Add(this.pctRemove);
             this.Controls.Add(this.lbName);
-            this.Controls.Add(this.btnRate);
             this.Controls.Add(this.lbView);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.pctImage);
@@ -167,7 +162,7 @@ namespace FinalProject
         public Guna.UI2.WinForms.Guna2HtmlLabel lbView;
         public Guna.UI2.WinForms.Guna2PictureBox pctImage;
         public System.Windows.Forms.Label lbName;
-        public Guna.UI2.WinForms.Guna2Button btnRate;
         public System.Windows.Forms.PictureBox pctRemove;
+        public Guna.UI2.WinForms.Guna2Button btnRate;
     }
 }
