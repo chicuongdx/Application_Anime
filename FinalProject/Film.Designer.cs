@@ -32,10 +32,12 @@ namespace FinalProject
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Film));
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbView = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbName = new System.Windows.Forms.Label();
             this.btnRate = new Guna.UI2.WinForms.Guna2Button();
             this.pctImage = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lbName = new System.Windows.Forms.Label();
+            this.pctRemove = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctRemove)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -63,6 +65,21 @@ namespace FinalProject
             this.lbView.Size = new System.Drawing.Size(10, 15);
             this.lbView.TabIndex = 3;
             this.lbView.Text = "0";
+            // 
+            // lbName
+            // 
+            this.lbName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbName.Location = new System.Drawing.Point(0, 178);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(51, 20);
+            this.lbName.TabIndex = 5;
+            this.lbName.Text = "Name";
+            this.lbName.Click += new System.EventHandler(this.lbName_Click);
+            this.lbName.MouseHover += new System.EventHandler(this.lbName_MouseHover);
             // 
             // btnRate
             // 
@@ -111,26 +128,25 @@ namespace FinalProject
             this.pctImage.Click += new System.EventHandler(this.pctImage_Click);
             this.pctImage.MouseHover += new System.EventHandler(this.pctImage_MouseHover);
             // 
-            // lbName
+            // pctRemove
             // 
-            this.lbName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbName.Location = new System.Drawing.Point(0, 178);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(51, 20);
-            this.lbName.TabIndex = 5;
-            this.lbName.Text = "Name";
-            this.lbName.Click += new System.EventHandler(this.lbName_Click);
-            this.lbName.MouseHover += new System.EventHandler(this.lbName_MouseHover);
+            this.pctRemove.BackColor = System.Drawing.Color.Maroon;
+            this.pctRemove.BackgroundImage = global::FinalProject.Properties.Resources.x;
+            this.pctRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pctRemove.Location = new System.Drawing.Point(117, 0);
+            this.pctRemove.Name = "pctRemove";
+            this.pctRemove.Size = new System.Drawing.Size(27, 23);
+            this.pctRemove.TabIndex = 35;
+            this.pctRemove.TabStop = false;
+            this.pctRemove.Visible = false;
+            this.pctRemove.Click += new System.EventHandler(this.pctRemove_Click);
             // 
             // Film
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.pctRemove);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.btnRate);
             this.Controls.Add(this.lbView);
@@ -140,6 +156,7 @@ namespace FinalProject
             this.Name = "Film";
             this.Size = new System.Drawing.Size(144, 218);
             ((System.ComponentModel.ISupportInitialize)(this.pctImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctRemove)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +168,6 @@ namespace FinalProject
         public Guna.UI2.WinForms.Guna2PictureBox pctImage;
         public System.Windows.Forms.Label lbName;
         public Guna.UI2.WinForms.Guna2Button btnRate;
+        public System.Windows.Forms.PictureBox pctRemove;
     }
 }

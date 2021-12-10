@@ -34,6 +34,7 @@ namespace FinalProject
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             Load_Data(DataFrame.DataSet);//load dataset
             Login(); // login
+            LoadTopAnime();//load top anime
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
@@ -91,12 +92,15 @@ namespace FinalProject
             flownlListFilm.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, flownlListFilm.Width, flownlListFilm.Height, 20, 20));
 
             DataFrame.History = DataFrame.ReadHistory();//load history
+            DataFrame.MyStore = DataFrame.ReadMyStore();//load my store
+            ResizeGrid();
         }
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
             DataFrame.WriteExcel(Application.StartupPath + "\\Data.xlsx", DataFrame.DataSet);
             DataFrame.WriteHistory();
+            DataFrame.WriteMyStore();
         }
 
         private void pnlTile_MouseMove(object sender, MouseEventArgs e)
@@ -362,6 +366,44 @@ namespace FinalProject
         private void flownlListFilm_ClientSizeChanged(object sender, EventArgs e)
         {
             flownlListFilm.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, flownlListFilm.Width, flownlListFilm.Height, 20, 20));
+        }
+
+        //Top anime
+        private void LoadTopAnime()
+        {
+            DataView top = DataFrame.DataSet.DefaultView;
+            top.Sort = "View desc";
+            DataTable sorted = top.ToTable();
+
+            DataTable res = new DataTable();
+            res.Columns.Add("Tên", typeof(string));
+            res.Columns.Add("Lượt xem", typeof(int));
+
+            for(int idx = 0; idx < 10; idx++)
+            {
+                DataRow row = res.NewRow();
+                row["Tên"] = sorted.Rows[idx]["Name"].ToString();
+                row["Lượt xem"] = Convert.ToInt32(sorted.Rows[idx]["View"]);
+                res.Rows.Add(row);
+            }
+            gridViewTop.DataSource = res;
+        }
+        private void ResizeGrid()
+        {
+            gridViewTop.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders);
+            gridViewTop.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+        }
+
+        private void gridViewTop_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataTable table = (DataTable)gridViewTop.DataSource;
+            try
+            {
+                DataRow dr = table.Rows[e.RowIndex];
+                DataRow row = DataFrame.DataSet.Select(string.Format("Name ='{0}'", dr["Tên"].ToString().Replace("'", "''")))[0];
+                OpenChildForm(new Describe(row), pnlLoadAll);
+            }
+            catch { }
         }
     }
 }

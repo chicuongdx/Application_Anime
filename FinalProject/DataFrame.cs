@@ -180,13 +180,14 @@ namespace FinalProject
         public static void WriteHistory()
         {
             string path = Application.StartupPath + "\\History\\" + UserData.currentUsername + ".txt";
-            foreach(string name in History)
+            using (StreamWriter sr = new StreamWriter(path))
             {
-                using (StreamWriter sr = new StreamWriter(path))
+                foreach (string name in History)
                 {
                     sr.WriteLine(name);
                 }
             }
+
         }
         public static List<string> History;
 
@@ -194,7 +195,7 @@ namespace FinalProject
         public static List<string> ReadMyStore()
         {
             List<string> res = new List<string>();
-            string path = Application.StartupPath + "\\History\\" + UserData.currentUsername + ".txt";
+            string path = Application.StartupPath + "\\MyStore\\" + UserData.currentUsername + ".txt";
             if (!File.Exists(path))
             {
                 using (var tw = new StreamWriter(path, true))
@@ -214,10 +215,10 @@ namespace FinalProject
         }
         public static void WriteMyStore()
         {
-            string path = Application.StartupPath + "\\History\\" + UserData.currentUsername + ".txt";
-            foreach (string name in History)
+            string path = Application.StartupPath + "\\MyStore\\" + UserData.currentUsername + ".txt";
+            using (StreamWriter sr = new StreamWriter(path))
             {
-                using (StreamWriter sr = new StreamWriter(path))
+                foreach (string name in MyStore)
                 {
                     sr.WriteLine(name);
                 }

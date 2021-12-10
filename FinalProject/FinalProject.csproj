@@ -357,6 +357,12 @@
     <Compile Include="WatchFilm.Designer.cs">
       <DependentUpon>WatchFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="YoutubeSave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="YoutubeSave.Designer.cs">
+      <DependentUpon>YoutubeSave.cs</DependentUpon>
+    </Compile>
     <Compile Include="YoutubeSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -417,6 +423,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WatchFilm.resx">
       <DependentUpon>WatchFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoutubeSave.resx">
+      <DependentUpon>YoutubeSave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YoutubeSearch.resx">
       <DependentUpon>YoutubeSearch.cs</DependentUpon>

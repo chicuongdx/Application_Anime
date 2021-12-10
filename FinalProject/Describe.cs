@@ -500,6 +500,19 @@ namespace FinalProject
                 }
             }
         }
+
         // add to my store
+        private void btnAddStore_Click(object sender, EventArgs e)
+        {
+            if (!DataFrame.MyStore.Contains(lbName.Text))
+            {
+                DataFrame.MyStore.Add(lbName.Text);
+                MessageBox.Show("Thêm '" + lbName.Text + "' vào kho thành công");
+            }
+            else
+            {
+                MessageBox.Show("'" + lbName.Text + "' đã có trong kho của bạn", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
