@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -153,5 +154,43 @@ namespace FinalProject
             Tuple<List<string>, List<string>> result = new Tuple<List<string>, List<string>>(lstSeason, lstYearStr);
             return result;
         }
+
+        //data history
+        public static List<string> ReadHistory()
+        {
+            List<string> res = new List<string>();
+            string path = Application.StartupPath + "\\History\\" + UserData.currentUsername + ".txt";
+            if (!File.Exists(path))
+            {
+                using (var tw = new StreamWriter(path, true))
+                {
+                    tw.WriteLine();
+                }
+            }
+            string[] readfile = File.ReadAllLines(path);
+            foreach (string s in readfile)
+            {
+                if (s != "")
+                {
+                    res.Add(s);
+                }
+            }
+            return res;
+        }
+        public static void WriteHistory()
+        {
+            string path = Application.StartupPath + "\\History\\" + UserData.currentUsername + ".txt";
+            foreach(string name in History)
+            {
+                using (StreamWriter sr = new StreamWriter(path))
+                {
+                    sr.WriteLine(name);
+                }
+            }
+        }
+        public static List<string> History;
+
+        //Data my store
+
     }
 }

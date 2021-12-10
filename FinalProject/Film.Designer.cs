@@ -58,7 +58,7 @@ namespace FinalProject
             this.lbView.BackColor = System.Drawing.Color.Transparent;
             this.lbView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbView.ForeColor = System.Drawing.Color.White;
-            this.lbView.Location = new System.Drawing.Point(58, 199);
+            this.lbView.Location = new System.Drawing.Point(58, 200);
             this.lbView.Name = "lbView";
             this.lbView.Size = new System.Drawing.Size(10, 15);
             this.lbView.TabIndex = 3;
@@ -66,6 +66,7 @@ namespace FinalProject
             // 
             // btnRate
             // 
+            this.btnRate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRate.BackColor = System.Drawing.Color.Transparent;
             this.btnRate.BorderColor = System.Drawing.Color.DarkOrange;
             this.btnRate.BorderRadius = 10;

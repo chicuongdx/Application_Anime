@@ -89,11 +89,14 @@ namespace FinalProject
 
             pnlPreview.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlPreview.Width, pnlPreview.Height, 20, 20));
             flownlListFilm.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, flownlListFilm.Width, flownlListFilm.Height, 20, 20));
+
+            DataFrame.History = DataFrame.ReadHistory();//load history
         }
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
             DataFrame.WriteExcel(Application.StartupPath + "\\Data.xlsx", DataFrame.DataSet);
+            DataFrame.WriteHistory();
         }
 
         private void pnlTile_MouseMove(object sender, MouseEventArgs e)
@@ -151,7 +154,7 @@ namespace FinalProject
             pnlPreview.BackgroundImage = img;
             lbName.Text = row["Name"].ToString();
             lbView.Text = string.Format("{0:N}", Convert.ToInt32(row["View"])).Replace(".00", "");
-            lbRating.Text = row["Rating"].ToString();
+            lbRating.Text = Math.Round(Convert.ToDouble(row["Rating"]), 1).ToString();
             lbNumEp.Text = row["NumEp"].ToString() + " Tập";
             lbNumMoive.Text = row["NumMovie"].ToString() + " Tập";
         }

@@ -23,6 +23,7 @@ namespace FinalProject
         private void Store_Load(object sender, EventArgs e)
         {
             Load_Button(ap);
+            LoadHistory();
         }
         private void Load_Button(List<char> ap)
         {
@@ -137,5 +138,21 @@ namespace FinalProject
             return res;
         }
 
+        //Lịch sử xem phim
+        private void LoadHistory()
+        {
+            foreach(string s in DataFrame.History)
+            {
+                if (s != "")
+                {
+                    DataRow row = DataFrame.DataSet.Select("Name='" + s + "'")[0];
+                    Film hisFilm = cv2.filmread(row);
+                    flowPnlHistory.Controls.Add(hisFilm);
+                }
+            }
+        }
+
+        //MyStore
+        
     }
 }
