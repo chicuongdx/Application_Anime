@@ -56,6 +56,11 @@ namespace FinalProject
                 lbError.Text = "Mật khẩu không khớp!";
                 lbError.Visible = true;
             }
+            else if (txtPassword.Text.Length < 8)
+            {
+                lbError.Text = "Mật khẩu phải lớn hơn 7 kí tự!";
+                lbError.Visible = true;
+            }
             else
             {
                 string pattern = "[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+";

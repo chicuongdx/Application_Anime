@@ -64,9 +64,9 @@ namespace FinalProject
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(41, 237);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Tên đăng nhập:";
+            this.label1.Text = "Tên tài khoản:";
             // 
             // txtEmail
             // 

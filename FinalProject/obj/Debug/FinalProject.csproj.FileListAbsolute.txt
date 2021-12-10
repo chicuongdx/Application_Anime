@@ -320,3 +320,9 @@ D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\obj\Debug
 D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\obj\Debug\FinalProject.csproj.CopyComplete
 D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\obj\Debug\FinalProject.exe
 D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\obj\Debug\FinalProject.pdb
+D:\CLOUDX\Courses\Nam3\C#\github\FinalProject\FinalProject\obj\Debug\FinalProject.Comment.resources
+D:\CLOUDX\Courses\Nam3\C#\github\FinalProject\FinalProject\obj\Debug\FinalProject.ForgetPassword.resources
+D:\CLOUDX\Courses\Nam3\C#\github\FinalProject\FinalProject\obj\Debug\FinalProject.Login.resources
+D:\CLOUDX\Courses\Nam3\C#\github\FinalProject\FinalProject\obj\Debug\FinalProject.Register.resources
+D:\CLOUDX\Courses\Nam3\C#\github\FinalProject\FinalProject\obj\Debug\FinalProject.User.resources
+D:\CLOUDX\Courses\Nam3\C#\github\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.CopyComplete
