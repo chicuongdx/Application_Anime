@@ -67,9 +67,11 @@ namespace FinalProject
             // btnRate
             // 
             this.btnRate.BackColor = System.Drawing.Color.Transparent;
-            this.btnRate.BorderColor = System.Drawing.Color.Transparent;
+            this.btnRate.BorderColor = System.Drawing.Color.DarkOrange;
             this.btnRate.BorderRadius = 10;
+            this.btnRate.BorderThickness = 1;
             this.btnRate.CheckedState.Parent = this.btnRate;
+            this.btnRate.CustomBorderColor = System.Drawing.Color.Transparent;
             this.btnRate.CustomImages.Parent = this.btnRate;
             this.btnRate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -77,16 +79,17 @@ namespace FinalProject
             this.btnRate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnRate.DisabledState.Parent = this.btnRate;
             this.btnRate.Enabled = false;
-            this.btnRate.FillColor = System.Drawing.Color.DimGray;
+            this.btnRate.FillColor = System.Drawing.Color.Black;
+            this.btnRate.FocusedColor = System.Drawing.Color.Transparent;
             this.btnRate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(236)))), ((int)(((byte)(66)))));
+            this.btnRate.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnRate.HoverState.Parent = this.btnRate;
             this.btnRate.Image = global::FinalProject.Properties.Resources.star;
             this.btnRate.Location = new System.Drawing.Point(0, 0);
             this.btnRate.Name = "btnRate";
             this.btnRate.PressedColor = System.Drawing.Color.Transparent;
             this.btnRate.ShadowDecoration.Parent = this.btnRate;
-            this.btnRate.Size = new System.Drawing.Size(71, 25);
+            this.btnRate.Size = new System.Drawing.Size(52, 25);
             this.btnRate.TabIndex = 4;
             this.btnRate.Text = "0.0";
             // 
