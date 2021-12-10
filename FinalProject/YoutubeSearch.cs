@@ -95,9 +95,9 @@ namespace FinalProject
                 pnlSearch.Controls.Add(video);
                 video.ChoseClick += SearchReasult_Click;
                 video.DownloadClick += DownloadVideo;
+                video.AddStoreClick += AddStoreVideo;
             }
         }
-
         private void SearchReasult_Click(object sender, EventArgs e)
         {
             if ((YoutubeVideo)sender != null)
@@ -119,6 +119,10 @@ namespace FinalProject
                     MessageBox.Show(video.Snippet.Title + " Download Video Done!");
                 }
             }
+        }
+        private void AddStoreVideo(object sender, EventArgs e)
+        {
+
         }
 
         /// //////////////////////////////////////////////////////////////////////////////////

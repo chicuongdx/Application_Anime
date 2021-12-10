@@ -152,7 +152,7 @@ namespace FinalProject
             }
         }
 
-        //MyStore
+        //MyStore kho của bạn
         
     }
 }
