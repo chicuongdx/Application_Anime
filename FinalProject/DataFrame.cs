@@ -65,6 +65,7 @@ namespace FinalProject
             myTable.Columns.Add("Season", typeof(string));
             myTable.Columns.Add("Director", typeof(string));
             myTable.Columns.Add("Rating", typeof(double));
+            myTable.Columns.Add("NumRating", typeof(int));
 
             for (int i = 2; i <= rows; i++)
             {
@@ -82,6 +83,7 @@ namespace FinalProject
                     myNewRow["Season"] = Convert.ToString(excelRange.Cells[i, 9].Value2); //
                     myNewRow["Director"] = Convert.ToString(excelRange.Cells[i, 10].Value2); //
                     myNewRow["Rating"] = Convert.ToDouble(excelRange.Cells[i, 11].Value2);
+                    myNewRow["NumRating"] = Convert.ToInt32(excelRange.Cells[i, 12].Value2);
 
                     myTable.Rows.Add(myNewRow);
                 }

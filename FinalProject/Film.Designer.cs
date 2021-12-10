@@ -80,14 +80,14 @@ namespace FinalProject
             this.btnRate.DisabledState.Parent = this.btnRate;
             this.btnRate.Enabled = false;
             this.btnRate.FillColor = System.Drawing.Color.Black;
-            this.btnRate.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnRate.FocusedColor = System.Drawing.Color.DarkOrange;
             this.btnRate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRate.ForeColor = System.Drawing.Color.DarkOrange;
             this.btnRate.HoverState.Parent = this.btnRate;
             this.btnRate.Image = global::FinalProject.Properties.Resources.star;
             this.btnRate.Location = new System.Drawing.Point(0, 0);
             this.btnRate.Name = "btnRate";
-            this.btnRate.PressedColor = System.Drawing.Color.Transparent;
+            this.btnRate.PressedColor = System.Drawing.Color.DarkOrange;
             this.btnRate.ShadowDecoration.Parent = this.btnRate;
             this.btnRate.Size = new System.Drawing.Size(52, 25);
             this.btnRate.TabIndex = 4;
@@ -145,10 +145,10 @@ namespace FinalProject
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Button btnRate;
         public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         public Guna.UI2.WinForms.Guna2HtmlLabel lbView;
         public Guna.UI2.WinForms.Guna2PictureBox pctImage;
         public System.Windows.Forms.Label lbName;
+        public Guna.UI2.WinForms.Guna2Button btnRate;
     }
 }
