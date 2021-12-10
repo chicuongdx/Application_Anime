@@ -88,6 +88,7 @@ namespace FinalProject
             Load_Preview(random_row);
 
             pnlPreview.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlPreview.Width, pnlPreview.Height, 20, 20));
+            flownlListFilm.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, flownlListFilm.Width, flownlListFilm.Height, 20, 20));
         }
 
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
@@ -348,6 +349,16 @@ namespace FinalProject
         {
             YoutubeSearch frmSearchY = new YoutubeSearch();
             frmSearchY.ShowDialog();
+        }
+
+        private void pnlPreview_ClientSizeChanged(object sender, EventArgs e)
+        {
+            pnlPreview.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlPreview.Width, pnlPreview.Height, 20, 20));
+        }
+
+        private void flownlListFilm_ClientSizeChanged(object sender, EventArgs e)
+        {
+            flownlListFilm.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, flownlListFilm.Width, flownlListFilm.Height, 20, 20));
         }
     }
 }

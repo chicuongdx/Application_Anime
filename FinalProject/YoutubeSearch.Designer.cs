@@ -55,13 +55,13 @@ namespace FinalProject
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(286, 23);
+            this.txtSearch.Location = new System.Drawing.Point(215, 23);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(364, 36);
+            this.txtSearch.Size = new System.Drawing.Size(759, 36);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
@@ -85,7 +85,7 @@ namespace FinalProject
             this.pnlSearch.AutoScroll = true;
             this.pnlSearch.Location = new System.Drawing.Point(0, 80);
             this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(800, 370);
+            this.pnlSearch.Size = new System.Drawing.Size(1124, 602);
             this.pnlSearch.TabIndex = 5;
             // 
             // pctSearch
@@ -96,7 +96,7 @@ namespace FinalProject
             this.pctSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pctSearch.FillColor = System.Drawing.Color.Transparent;
             this.pctSearch.ImageRotate = 0F;
-            this.pctSearch.Location = new System.Drawing.Point(647, 23);
+            this.pctSearch.Location = new System.Drawing.Point(971, 23);
             this.pctSearch.Name = "pctSearch";
             this.pctSearch.ShadowDecoration.Parent = this.pctSearch;
             this.pctSearch.Size = new System.Drawing.Size(51, 36);
@@ -124,7 +124,7 @@ namespace FinalProject
             this.ctrlBoxClose.ForeColor = System.Drawing.Color.Black;
             this.ctrlBoxClose.HoverState.Parent = this.ctrlBoxClose;
             this.ctrlBoxClose.IconColor = System.Drawing.Color.Black;
-            this.ctrlBoxClose.Location = new System.Drawing.Point(753, 6);
+            this.ctrlBoxClose.Location = new System.Drawing.Point(1077, 6);
             this.ctrlBoxClose.Name = "ctrlBoxClose";
             this.ctrlBoxClose.ShadowDecoration.Parent = this.ctrlBoxClose;
             this.ctrlBoxClose.Size = new System.Drawing.Size(41, 25);
@@ -135,7 +135,7 @@ namespace FinalProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1124, 682);
             this.Controls.Add(this.ctrlBoxClose);
             this.Controls.Add(this.pnlSearch);
             this.Controls.Add(this.lbLogo);

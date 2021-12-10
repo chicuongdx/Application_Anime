@@ -540,11 +540,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flownlListFilm.AutoScroll = true;
-            this.flownlListFilm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.flownlListFilm.Location = new System.Drawing.Point(9, 274);
+            this.flownlListFilm.BackColor = System.Drawing.Color.Black;
+            this.flownlListFilm.Location = new System.Drawing.Point(9, 247);
             this.flownlListFilm.Name = "flownlListFilm";
-            this.flownlListFilm.Size = new System.Drawing.Size(776, 256);
+            this.flownlListFilm.Size = new System.Drawing.Size(776, 283);
             this.flownlListFilm.TabIndex = 0;
+            this.flownlListFilm.ClientSizeChanged += new System.EventHandler(this.flownlListFilm_ClientSizeChanged);
             // 
             // pnlPreview
             // 
@@ -552,8 +553,9 @@
             this.pnlPreview.Location = new System.Drawing.Point(9, 10);
             this.pnlPreview.Name = "pnlPreview";
             this.pnlPreview.ShadowDecoration.Parent = this.pnlPreview;
-            this.pnlPreview.Size = new System.Drawing.Size(524, 256);
+            this.pnlPreview.Size = new System.Drawing.Size(512, 231);
             this.pnlPreview.TabIndex = 2;
+            this.pnlPreview.ClientSizeChanged += new System.EventHandler(this.pnlPreview_ClientSizeChanged);
             // 
             // lbName
             // 
