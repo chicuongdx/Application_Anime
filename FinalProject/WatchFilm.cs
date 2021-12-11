@@ -76,7 +76,7 @@ namespace FinalProject
                 {
                     Guna2Button btn = new Guna2Button()
                     {
-                        Width = 60,
+                        Width = 70,
                         Height = 30,
                         Text = "Movie " + idx.ToString(),
                         BorderRadius = 10,
