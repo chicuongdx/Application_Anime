@@ -99,7 +99,7 @@ namespace FinalProject
             // 
             // pctRemove
             // 
-            this.pctRemove.BackColor = System.Drawing.Color.Maroon;
+            this.pctRemove.BackColor = System.Drawing.Color.DarkOrange;
             this.pctRemove.BackgroundImage = global::FinalProject.Properties.Resources.x;
             this.pctRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pctRemove.Location = new System.Drawing.Point(117, 0);
@@ -132,7 +132,7 @@ namespace FinalProject
             this.btnRate.Location = new System.Drawing.Point(0, 0);
             this.btnRate.Name = "btnRate";
             this.btnRate.ShadowDecoration.Parent = this.btnRate;
-            this.btnRate.Size = new System.Drawing.Size(68, 33);
+            this.btnRate.Size = new System.Drawing.Size(52, 33);
             this.btnRate.TabIndex = 36;
             this.btnRate.Text = "0.0";
             // 

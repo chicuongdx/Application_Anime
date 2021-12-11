@@ -54,7 +54,7 @@ namespace FinalProject
             // 
             this.Title.BackColor = System.Drawing.Color.Transparent;
             this.Title.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.DarkOrange;
             this.Title.Location = new System.Drawing.Point(306, 0);
             this.Title.Name = "Title";
@@ -77,7 +77,7 @@ namespace FinalProject
             // 
             // pctRemove
             // 
-            this.pctRemove.BackColor = System.Drawing.Color.Maroon;
+            this.pctRemove.BackColor = System.Drawing.Color.DarkOrange;
             this.pctRemove.BackgroundImage = global::FinalProject.Properties.Resources.x;
             this.pctRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pctRemove.Location = new System.Drawing.Point(0, 0);
