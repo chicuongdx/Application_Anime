@@ -74,7 +74,7 @@ namespace FinalProject
             }
         }
 
-        public string path_avatar;
+        public string path_avatar = "";
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -82,10 +82,10 @@ namespace FinalProject
             if (open.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Image = cv2.resize(cv2.imread(open.FileName), new Size(pictureBox1.Width, pictureBox1.Height));
+                path_avatar = open.FileName;
+                MessageBox.Show("Thay đổi ảnh đại diện thành công");
             }
-            path_avatar = open.FileName;
-
-            MessageBox.Show("Thay đổi ảnh đại diện thành công");
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
