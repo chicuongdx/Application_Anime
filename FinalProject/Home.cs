@@ -49,10 +49,11 @@ namespace FinalProject
             loginFrm.ParentForm = this;
             loginFrm.ShowDialog();
             // avatar when login
-            try
+;           try
             {
                 string path_avatar = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
-                pctAvatar.Image = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
+                UserData.Avatar = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
+                pctAvatar.Image = UserData.Avatar;
             }
             catch { pctAvatar.Image = cv2.resize(Properties.Resources.avarta, new Size(pctAvatar.Width, pctAvatar.Height)); }
         }
@@ -247,23 +248,38 @@ namespace FinalProject
         {
             OpenChildForm(new Store(), pnlLoadAll);
         }
-        
+
         //User
+        string path_avatar;
+        string path_save;
         private void pctAvatar_Click(object sender, EventArgs e)
         {
             User userFrm = new User();
             this.Visible = false;
             userFrm.ShowDialog();
             this.Visible = true;
-            try
+
+            path_avatar = userFrm.path_avatar;
+            path_save = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
+            SaveAvatar();
+        }
+        private void SaveAvatar()
+        {
+            UserData.Avatar = null;
+            pctAvatar.Image = null;
+            if (File.Exists(path_save))
             {
-                string path_avatar = userFrm.path_avatar;
-                pctAvatar.Image = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
-                string path_save = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
-                if (!File.Exists(path_save))
-                    File.Copy(path_avatar, path_save);
+                System.GC.Collect();
+                System.GC.WaitForPendingFinalizers();
+                File.Delete(path_save);
+                File.Copy(path_avatar, path_save);
             }
-            catch { }
+            else
+            {
+                File.Copy(path_avatar, path_save);
+            }
+            UserData.Avatar = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
+            pctAvatar.Image = UserData.Avatar;
         }
 
         //search and filter anime

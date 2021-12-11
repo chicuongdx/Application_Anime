@@ -44,12 +44,17 @@ namespace FinalProject
             txtUsername.Text = UserData.currentUsername;
             txtEmail.Text = UserData.currentEmail;
             strData = File.ReadAllLines(url);
-            string path_save = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
-            pictureBox1.Image = cv2.resize(cv2.imread(path_save), new Size(pictureBox1.Width, pictureBox1.Height));
             foreach (string line in strData)
             {
                 usersData.Add(JsonConvert.DeserializeObject<UserData>(line));
             }
+
+            try {
+                string path_save = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
+                UserData.Avatar = cv2.resize(cv2.imread(path_save), new Size(pictureBox1.Width, pictureBox1.Height));    
+                pictureBox1.Image = UserData.Avatar;
+            }
+            catch { }
         }
 
         private void editData(string username, string email, string oldPass, string newPass)

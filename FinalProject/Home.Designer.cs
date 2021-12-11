@@ -47,10 +47,12 @@
             this.pnlAll = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlLoadAll = new System.Windows.Forms.Panel();
             this.pnlOther = new System.Windows.Forms.Panel();
+            this.gridViewTop = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.GpBoxRandom = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnRandom = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlAnime = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lbView = new System.Windows.Forms.Label();
@@ -65,8 +67,6 @@
             this.lbRating = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlApp = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.gridViewTop = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pnlATle.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctAvatar)).BeginInit();
@@ -74,13 +74,13 @@
             this.pnlAll.SuspendLayout();
             this.pnlLoadAll.SuspendLayout();
             this.pnlOther.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTop)).BeginInit();
+            this.panel1.SuspendLayout();
             this.GpBoxRandom.SuspendLayout();
             this.pnlAnime.SuspendLayout();
             this.pnlPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlApp.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewTop)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlATle
@@ -370,6 +370,86 @@
             this.pnlOther.Size = new System.Drawing.Size(284, 539);
             this.pnlOther.TabIndex = 1;
             // 
+            // gridViewTop
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gridViewTop.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridViewTop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridViewTop.BackgroundColor = System.Drawing.Color.White;
+            this.gridViewTop.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridViewTop.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridViewTop.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewTop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewTop.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridViewTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridViewTop.EnableHeadersVisualStyles = false;
+            this.gridViewTop.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gridViewTop.Location = new System.Drawing.Point(0, 216);
+            this.gridViewTop.Name = "gridViewTop";
+            this.gridViewTop.RowHeadersVisible = false;
+            this.gridViewTop.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridViewTop.Size = new System.Drawing.Size(284, 323);
+            this.gridViewTop.TabIndex = 5;
+            this.gridViewTop.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridViewTop.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gridViewTop.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gridViewTop.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gridViewTop.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gridViewTop.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.gridViewTop.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gridViewTop.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gridViewTop.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gridViewTop.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.gridViewTop.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gridViewTop.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gridViewTop.ThemeStyle.HeaderStyle.Height = 23;
+            this.gridViewTop.ThemeStyle.ReadOnly = false;
+            this.gridViewTop.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridViewTop.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridViewTop.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.gridViewTop.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gridViewTop.ThemeStyle.RowsStyle.Height = 22;
+            this.gridViewTop.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gridViewTop.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gridViewTop.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewTop_CellContentClick);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.GpBoxRandom);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(284, 216);
+            this.panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(94, 177);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Top anime";
+            // 
             // GpBoxRandom
             // 
             this.GpBoxRandom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -426,19 +506,6 @@
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(269, 48);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Nếu bạn không biết xem gì hôm nay. Hãy để chúng tôi chọn cho bạn.";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(94, 177);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Top anime";
             // 
             // pnlAnime
             // 
@@ -625,73 +692,6 @@
             this.pnlApp.Size = new System.Drawing.Size(1124, 104);
             this.pnlApp.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.GpBoxRandom);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 216);
-            this.panel1.TabIndex = 4;
-            // 
-            // gridViewTop
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gridViewTop.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridViewTop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridViewTop.BackgroundColor = System.Drawing.Color.White;
-            this.gridViewTop.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridViewTop.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gridViewTop.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewTop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewTop.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridViewTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridViewTop.EnableHeadersVisualStyles = false;
-            this.gridViewTop.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridViewTop.Location = new System.Drawing.Point(0, 216);
-            this.gridViewTop.Name = "gridViewTop";
-            this.gridViewTop.RowHeadersVisible = false;
-            this.gridViewTop.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridViewTop.Size = new System.Drawing.Size(284, 323);
-            this.gridViewTop.TabIndex = 5;
-            this.gridViewTop.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridViewTop.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gridViewTop.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gridViewTop.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gridViewTop.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gridViewTop.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gridViewTop.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridViewTop.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gridViewTop.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gridViewTop.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gridViewTop.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gridViewTop.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gridViewTop.ThemeStyle.HeaderStyle.Height = 23;
-            this.gridViewTop.ThemeStyle.ReadOnly = false;
-            this.gridViewTop.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridViewTop.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gridViewTop.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.gridViewTop.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gridViewTop.ThemeStyle.RowsStyle.Height = 22;
-            this.gridViewTop.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridViewTop.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gridViewTop.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewTop_CellContentClick);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -715,15 +715,15 @@
             this.pnlAll.ResumeLayout(false);
             this.pnlLoadAll.ResumeLayout(false);
             this.pnlOther.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewTop)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.GpBoxRandom.ResumeLayout(false);
             this.pnlAnime.ResumeLayout(false);
             this.pnlAnime.PerformLayout();
             this.pnlPreview.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlApp.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewTop)).EndInit();
             this.ResumeLayout(false);
 
         }

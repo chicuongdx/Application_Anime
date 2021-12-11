@@ -281,8 +281,6 @@ namespace FinalProject
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -300,5 +298,6 @@ namespace FinalProject
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label lbError;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
