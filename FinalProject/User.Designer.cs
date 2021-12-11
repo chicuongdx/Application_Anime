@@ -37,13 +37,13 @@ namespace FinalProject
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnlChangePass = new System.Windows.Forms.Panel();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.txtNewPass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtOldPass = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbError = new System.Windows.Forms.Label();
@@ -129,6 +129,19 @@ namespace FinalProject
             this.panel1.Size = new System.Drawing.Size(350, 209);
             this.panel1.TabIndex = 91;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.MidnightBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(157, 99);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(103, 21);
+            this.linkLabel1.TabIndex = 91;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Đổi mật khẩu";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // pnlChangePass
             // 
             this.pnlChangePass.Controls.Add(this.btnConfirm);
@@ -193,19 +206,6 @@ namespace FinalProject
             this.label6.Size = new System.Drawing.Size(100, 20);
             this.label6.TabIndex = 21;
             this.label6.Text = "Mật khẩu cũ:";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(157, 99);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(103, 21);
-            this.linkLabel1.TabIndex = 91;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Đổi mật khẩu";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox2
             // 
