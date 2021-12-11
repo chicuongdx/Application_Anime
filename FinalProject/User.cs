@@ -44,6 +44,8 @@ namespace FinalProject
             txtUsername.Text = UserData.currentUsername;
             txtEmail.Text = UserData.currentEmail;
             strData = File.ReadAllLines(url);
+            string path_save = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
+            pictureBox1.Image = cv2.resize(cv2.imread(path_save), new Size(pictureBox1.Width, pictureBox1.Height));
             foreach (string line in strData)
             {
                 usersData.Add(JsonConvert.DeserializeObject<UserData>(line));
@@ -77,6 +79,8 @@ namespace FinalProject
                 pictureBox1.Image = cv2.resize(cv2.imread(open.FileName), new Size(pictureBox1.Width, pictureBox1.Height));
             }
             path_avatar = open.FileName;
+
+            MessageBox.Show("Thay đổi ảnh đại diện thành công");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
