@@ -327,3 +327,4 @@ D:\CLOUDX\Courses\Nam3\C#\github\FinalProject\FinalProject\obj\Debug\FinalProjec
 D:\CLOUDX\Courses\Nam3\C#\github\FinalProject\FinalProject\obj\Debug\FinalProject.User.resources
 D:\CLOUDX\Courses\Nam3\C#\github\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.CopyComplete
 D:\CLOUDX\Courses\Nam3\C#\github\FinalProject\FinalProject\obj\Debug\FinalProject.YoutubeSave.resources
+D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\obj\Debug\FinalProject.YoutubeSave.resources
