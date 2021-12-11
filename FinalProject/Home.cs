@@ -250,8 +250,6 @@ namespace FinalProject
         }
 
         //User
-        string path_avatar;
-        string path_save;
         private void pctAvatar_Click(object sender, EventArgs e)
         {
             User userFrm = new User();
@@ -259,15 +257,13 @@ namespace FinalProject
             userFrm.ShowDialog();
             this.Visible = true;
 
-            path_avatar = userFrm.path_avatar;
-            path_save = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
-            SaveAvatar();
+            string path_avatar = userFrm.path_avatar;
+            string path_save = Application.StartupPath + "\\User\\" + UserData.currentUsername + ".jfif";
+            SaveAvatar(path_avatar, path_save);
         }
-        private void SaveAvatar()
+        private void SaveAvatar(string path_avatar, string path_save)
         {
-            UserData.Avatar = null;
-            pctAvatar.Image = null;
-            try
+            if (path_avatar != "")
             {
                 if (File.Exists(path_save))
                 {
@@ -283,7 +279,6 @@ namespace FinalProject
                 UserData.Avatar = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
                 pctAvatar.Image = UserData.Avatar;
             }
-            catch { }
         }
 
         //search and filter anime
