@@ -267,19 +267,23 @@ namespace FinalProject
         {
             UserData.Avatar = null;
             pctAvatar.Image = null;
-            if (File.Exists(path_save))
+            try
             {
-                System.GC.Collect();
-                System.GC.WaitForPendingFinalizers();
-                File.Delete(path_save);
-                File.Copy(path_avatar, path_save);
+                if (File.Exists(path_save))
+                {
+                    System.GC.Collect();
+                    System.GC.WaitForPendingFinalizers();
+                    File.Delete(path_save);
+                    File.Copy(path_avatar, path_save);
+                }
+                else
+                {
+                    File.Copy(path_avatar, path_save);
+                }
+                UserData.Avatar = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
+                pctAvatar.Image = UserData.Avatar;
             }
-            else
-            {
-                File.Copy(path_avatar, path_save);
-            }
-            UserData.Avatar = cv2.resize(cv2.imread(path_avatar), new Size(pctAvatar.Width, pctAvatar.Height));
-            pctAvatar.Image = UserData.Avatar;
+            catch { }
         }
 
         //search and filter anime
