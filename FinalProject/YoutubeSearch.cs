@@ -102,10 +102,11 @@ namespace FinalProject
         {
             if ((YoutubeVideo)sender != null)
             {
-                new PlayYoutube(((YoutubeVideo)sender).YourChoice).Show();
+                var vid = ((YoutubeVideo)sender).YourChoice;
+                new PlayYoutube(vid.Id.VideoId, vid.Snippet.Title, vid.Snippet.ChannelTitle).Show();
             }
         }
-        private async void DownloadVideo(object sender, EventArgs e)
+        private void DownloadVideo(object sender, EventArgs e)
         {
             SearchResult video = ((YoutubeVideo)sender).YourChoice;
             using (var folderDialog = new FolderBrowserDialog())
@@ -114,14 +115,25 @@ namespace FinalProject
                 {
                     string path  = folderDialog.SelectedPath + "\\" + video.Snippet.Title + ".mp4";
                     var ytb = YouTube.Default;
-                    var vid = await ytb.GetVideoAsync("https://www.youtube.com/watch?v=" + video.Id.VideoId);
-                    File.WriteAllBytes(path, await vid.GetBytesAsync());
+                    var vid = ytb.GetVideo("https://www.youtube.com/watch?v=" + video.Id.VideoId);
+                    File.WriteAllBytes(path, vid.GetBytes());
                     MessageBox.Show(video.Snippet.Title + " Download Video Done!");
                 }
             }
         }
         private void AddStoreVideo(object sender, EventArgs e)
         {
+            SearchResult video = ((YoutubeVideo)sender).YourChoice;
+            string url = "https://www.youtube.com/watch?v=" + video.Id.VideoId;
+            if (!DataFrame.MyStore.Contains(url))
+            {
+                DataFrame.MyStore.Add(url);
+                MessageBox.Show("Thêm '" + video.Snippet.Title + "' vào kho thành công");
+            }
+            else
+            {
+                MessageBox.Show("'" + video.Snippet.Title + "' đã có trong không của bạn", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 

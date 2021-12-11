@@ -30,19 +30,20 @@ namespace FinalProject
         private void InitializeComponent()
         {
             this.pnlPreview = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAddStore = new Guna.UI2.WinForms.Guna2Button();
             this.pctStar10 = new System.Windows.Forms.PictureBox();
-            this.pctStar9 = new System.Windows.Forms.PictureBox();
-            this.pctStar8 = new System.Windows.Forms.PictureBox();
-            this.pctStar7 = new System.Windows.Forms.PictureBox();
-            this.pctStar6 = new System.Windows.Forms.PictureBox();
-            this.pctStar5 = new System.Windows.Forms.PictureBox();
-            this.pctStar4 = new System.Windows.Forms.PictureBox();
-            this.pctStar3 = new System.Windows.Forms.PictureBox();
-            this.pctStar2 = new System.Windows.Forms.PictureBox();
-            this.pctStar1 = new System.Windows.Forms.PictureBox();
             this.lbNumRating = new System.Windows.Forms.Label();
             this.lbWatch = new System.Windows.Forms.Label();
+            this.pctStar9 = new System.Windows.Forms.PictureBox();
             this.pctImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pctStar6 = new System.Windows.Forms.PictureBox();
+            this.pctStar8 = new System.Windows.Forms.PictureBox();
+            this.pctStar1 = new System.Windows.Forms.PictureBox();
+            this.pctStar2 = new System.Windows.Forms.PictureBox();
+            this.pctStar7 = new System.Windows.Forms.PictureBox();
+            this.pctStar3 = new System.Windows.Forms.PictureBox();
+            this.pctStar4 = new System.Windows.Forms.PictureBox();
+            this.pctStar5 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lbNumMoive = new System.Windows.Forms.Label();
             this.lbNumEp = new System.Windows.Forms.Label();
@@ -72,15 +73,15 @@ namespace FinalProject
             this.pnlPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStar10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctStar9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlDescribe.SuspendLayout();
             this.pnlWriteCmt.SuspendLayout();
@@ -91,6 +92,7 @@ namespace FinalProject
             // 
             this.pnlPreview.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnlPreview.Controls.Add(this.btnAddStore);
             this.pnlPreview.Controls.Add(this.pctStar10);
             this.pnlPreview.Controls.Add(this.lbNumRating);
             this.pnlPreview.Controls.Add(this.lbWatch);
@@ -112,6 +114,32 @@ namespace FinalProject
             this.pnlPreview.Size = new System.Drawing.Size(699, 283);
             this.pnlPreview.TabIndex = 0;
             // 
+            // btnAddStore
+            // 
+            this.btnAddStore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddStore.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddStore.BorderColor = System.Drawing.Color.Peru;
+            this.btnAddStore.BorderRadius = 10;
+            this.btnAddStore.BorderThickness = 1;
+            this.btnAddStore.CheckedState.Parent = this.btnAddStore;
+            this.btnAddStore.CustomImages.Parent = this.btnAddStore;
+            this.btnAddStore.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddStore.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddStore.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddStore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddStore.DisabledState.Parent = this.btnAddStore;
+            this.btnAddStore.FillColor = System.Drawing.Color.Black;
+            this.btnAddStore.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddStore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAddStore.HoverState.Parent = this.btnAddStore;
+            this.btnAddStore.Location = new System.Drawing.Point(586, 3);
+            this.btnAddStore.Name = "btnAddStore";
+            this.btnAddStore.ShadowDecoration.Parent = this.btnAddStore;
+            this.btnAddStore.Size = new System.Drawing.Size(113, 32);
+            this.btnAddStore.TabIndex = 29;
+            this.btnAddStore.Text = "Thêm vào kho";
+            this.btnAddStore.Click += new System.EventHandler(this.btnAddStore_Click);
+            // 
             // pctStar10
             // 
             this.pctStar10.BackColor = System.Drawing.Color.Transparent;
@@ -121,96 +149,6 @@ namespace FinalProject
             this.pctStar10.TabIndex = 28;
             this.pctStar10.TabStop = false;
             this.pctStar10.Click += new System.EventHandler(this.pctStar10_Click);
-            // 
-            // pctStar9
-            // 
-            this.pctStar9.BackColor = System.Drawing.Color.Transparent;
-            this.pctStar9.Location = new System.Drawing.Point(404, 189);
-            this.pctStar9.Name = "pctStar9";
-            this.pctStar9.Size = new System.Drawing.Size(20, 20);
-            this.pctStar9.TabIndex = 27;
-            this.pctStar9.TabStop = false;
-            this.pctStar9.Click += new System.EventHandler(this.pctStar9_Click);
-            // 
-            // pctStar8
-            // 
-            this.pctStar8.BackColor = System.Drawing.Color.Transparent;
-            this.pctStar8.Location = new System.Drawing.Point(378, 189);
-            this.pctStar8.Name = "pctStar8";
-            this.pctStar8.Size = new System.Drawing.Size(20, 20);
-            this.pctStar8.TabIndex = 26;
-            this.pctStar8.TabStop = false;
-            this.pctStar8.Click += new System.EventHandler(this.pctStar8_Click);
-            // 
-            // pctStar7
-            // 
-            this.pctStar7.BackColor = System.Drawing.Color.Transparent;
-            this.pctStar7.Location = new System.Drawing.Point(352, 189);
-            this.pctStar7.Name = "pctStar7";
-            this.pctStar7.Size = new System.Drawing.Size(20, 20);
-            this.pctStar7.TabIndex = 25;
-            this.pctStar7.TabStop = false;
-            this.pctStar7.Click += new System.EventHandler(this.pctStar7_Click);
-            // 
-            // pctStar6
-            // 
-            this.pctStar6.BackColor = System.Drawing.Color.Transparent;
-            this.pctStar6.Location = new System.Drawing.Point(326, 189);
-            this.pctStar6.Name = "pctStar6";
-            this.pctStar6.Size = new System.Drawing.Size(20, 20);
-            this.pctStar6.TabIndex = 24;
-            this.pctStar6.TabStop = false;
-            this.pctStar6.Click += new System.EventHandler(this.pctStar6_Click);
-            // 
-            // pctStar5
-            // 
-            this.pctStar5.BackColor = System.Drawing.Color.Transparent;
-            this.pctStar5.Location = new System.Drawing.Point(300, 189);
-            this.pctStar5.Name = "pctStar5";
-            this.pctStar5.Size = new System.Drawing.Size(20, 20);
-            this.pctStar5.TabIndex = 23;
-            this.pctStar5.TabStop = false;
-            this.pctStar5.Click += new System.EventHandler(this.pctStar5_Click);
-            // 
-            // pctStar4
-            // 
-            this.pctStar4.BackColor = System.Drawing.Color.Transparent;
-            this.pctStar4.Location = new System.Drawing.Point(274, 189);
-            this.pctStar4.Name = "pctStar4";
-            this.pctStar4.Size = new System.Drawing.Size(20, 20);
-            this.pctStar4.TabIndex = 19;
-            this.pctStar4.TabStop = false;
-            this.pctStar4.Click += new System.EventHandler(this.pctStar4_Click);
-            // 
-            // pctStar3
-            // 
-            this.pctStar3.BackColor = System.Drawing.Color.Transparent;
-            this.pctStar3.Location = new System.Drawing.Point(248, 189);
-            this.pctStar3.Name = "pctStar3";
-            this.pctStar3.Size = new System.Drawing.Size(20, 20);
-            this.pctStar3.TabIndex = 20;
-            this.pctStar3.TabStop = false;
-            this.pctStar3.Click += new System.EventHandler(this.pctStar3_Click);
-            // 
-            // pctStar2
-            // 
-            this.pctStar2.BackColor = System.Drawing.Color.Transparent;
-            this.pctStar2.Location = new System.Drawing.Point(222, 189);
-            this.pctStar2.Name = "pctStar2";
-            this.pctStar2.Size = new System.Drawing.Size(20, 20);
-            this.pctStar2.TabIndex = 21;
-            this.pctStar2.TabStop = false;
-            this.pctStar2.Click += new System.EventHandler(this.pctStar2_Click);
-            // 
-            // pctStar1
-            // 
-            this.pctStar1.BackColor = System.Drawing.Color.Transparent;
-            this.pctStar1.Location = new System.Drawing.Point(196, 189);
-            this.pctStar1.Name = "pctStar1";
-            this.pctStar1.Size = new System.Drawing.Size(20, 20);
-            this.pctStar1.TabIndex = 22;
-            this.pctStar1.TabStop = false;
-            this.pctStar1.Click += new System.EventHandler(this.pctStar1_Click);
             // 
             // lbNumRating
             // 
@@ -238,6 +176,16 @@ namespace FinalProject
             this.lbWatch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbWatch.Click += new System.EventHandler(this.lbWatch_Click);
             // 
+            // pctStar9
+            // 
+            this.pctStar9.BackColor = System.Drawing.Color.Transparent;
+            this.pctStar9.Location = new System.Drawing.Point(404, 189);
+            this.pctStar9.Name = "pctStar9";
+            this.pctStar9.Size = new System.Drawing.Size(20, 20);
+            this.pctStar9.TabIndex = 27;
+            this.pctStar9.TabStop = false;
+            this.pctStar9.Click += new System.EventHandler(this.pctStar9_Click);
+            // 
             // pctImage
             // 
             this.pctImage.BorderRadius = 5;
@@ -248,6 +196,86 @@ namespace FinalProject
             this.pctImage.Size = new System.Drawing.Size(150, 200);
             this.pctImage.TabIndex = 0;
             this.pctImage.TabStop = false;
+            // 
+            // pctStar6
+            // 
+            this.pctStar6.BackColor = System.Drawing.Color.Transparent;
+            this.pctStar6.Location = new System.Drawing.Point(326, 189);
+            this.pctStar6.Name = "pctStar6";
+            this.pctStar6.Size = new System.Drawing.Size(20, 20);
+            this.pctStar6.TabIndex = 24;
+            this.pctStar6.TabStop = false;
+            this.pctStar6.Click += new System.EventHandler(this.pctStar6_Click);
+            // 
+            // pctStar8
+            // 
+            this.pctStar8.BackColor = System.Drawing.Color.Transparent;
+            this.pctStar8.Location = new System.Drawing.Point(378, 189);
+            this.pctStar8.Name = "pctStar8";
+            this.pctStar8.Size = new System.Drawing.Size(20, 20);
+            this.pctStar8.TabIndex = 26;
+            this.pctStar8.TabStop = false;
+            this.pctStar8.Click += new System.EventHandler(this.pctStar8_Click);
+            // 
+            // pctStar1
+            // 
+            this.pctStar1.BackColor = System.Drawing.Color.Transparent;
+            this.pctStar1.Location = new System.Drawing.Point(196, 189);
+            this.pctStar1.Name = "pctStar1";
+            this.pctStar1.Size = new System.Drawing.Size(20, 20);
+            this.pctStar1.TabIndex = 22;
+            this.pctStar1.TabStop = false;
+            this.pctStar1.Click += new System.EventHandler(this.pctStar1_Click);
+            // 
+            // pctStar2
+            // 
+            this.pctStar2.BackColor = System.Drawing.Color.Transparent;
+            this.pctStar2.Location = new System.Drawing.Point(222, 189);
+            this.pctStar2.Name = "pctStar2";
+            this.pctStar2.Size = new System.Drawing.Size(20, 20);
+            this.pctStar2.TabIndex = 21;
+            this.pctStar2.TabStop = false;
+            this.pctStar2.Click += new System.EventHandler(this.pctStar2_Click);
+            // 
+            // pctStar7
+            // 
+            this.pctStar7.BackColor = System.Drawing.Color.Transparent;
+            this.pctStar7.Location = new System.Drawing.Point(352, 189);
+            this.pctStar7.Name = "pctStar7";
+            this.pctStar7.Size = new System.Drawing.Size(20, 20);
+            this.pctStar7.TabIndex = 25;
+            this.pctStar7.TabStop = false;
+            this.pctStar7.Click += new System.EventHandler(this.pctStar7_Click);
+            // 
+            // pctStar3
+            // 
+            this.pctStar3.BackColor = System.Drawing.Color.Transparent;
+            this.pctStar3.Location = new System.Drawing.Point(248, 189);
+            this.pctStar3.Name = "pctStar3";
+            this.pctStar3.Size = new System.Drawing.Size(20, 20);
+            this.pctStar3.TabIndex = 20;
+            this.pctStar3.TabStop = false;
+            this.pctStar3.Click += new System.EventHandler(this.pctStar3_Click);
+            // 
+            // pctStar4
+            // 
+            this.pctStar4.BackColor = System.Drawing.Color.Transparent;
+            this.pctStar4.Location = new System.Drawing.Point(274, 189);
+            this.pctStar4.Name = "pctStar4";
+            this.pctStar4.Size = new System.Drawing.Size(20, 20);
+            this.pctStar4.TabIndex = 19;
+            this.pctStar4.TabStop = false;
+            this.pctStar4.Click += new System.EventHandler(this.pctStar4_Click);
+            // 
+            // pctStar5
+            // 
+            this.pctStar5.BackColor = System.Drawing.Color.Transparent;
+            this.pctStar5.Location = new System.Drawing.Point(300, 189);
+            this.pctStar5.Name = "pctStar5";
+            this.pctStar5.Size = new System.Drawing.Size(20, 20);
+            this.pctStar5.TabIndex = 23;
+            this.pctStar5.TabStop = false;
+            this.pctStar5.Click += new System.EventHandler(this.pctStar5_Click);
             // 
             // label6
             // 
@@ -407,9 +435,9 @@ namespace FinalProject
             this.lbDescribe.BackColor = System.Drawing.Color.Transparent;
             this.lbDescribe.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDescribe.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbDescribe.Location = new System.Drawing.Point(20, 209);
+            this.lbDescribe.Location = new System.Drawing.Point(2, 209);
             this.lbDescribe.Name = "lbDescribe";
-            this.lbDescribe.Size = new System.Drawing.Size(659, 120);
+            this.lbDescribe.Size = new System.Drawing.Size(694, 137);
             this.lbDescribe.TabIndex = 5;
             this.lbDescribe.Text = "Describe";
             // 
@@ -434,7 +462,7 @@ namespace FinalProject
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(7, 190);
+            this.label7.Location = new System.Drawing.Point(10, 188);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 21);
             this.label7.TabIndex = 4;
@@ -616,15 +644,15 @@ namespace FinalProject
             this.pnlPreview.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctStar10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctStar9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctStar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctStar5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlDescribe.ResumeLayout(false);
             this.pnlDescribe.PerformLayout();
@@ -677,5 +705,6 @@ namespace FinalProject
         private System.Windows.Forms.PictureBox pctStar2;
         private System.Windows.Forms.PictureBox pctStar1;
         private System.Windows.Forms.Label lbNumRating;
+        private Guna.UI2.WinForms.Guna2Button btnAddStore;
     }
 }
