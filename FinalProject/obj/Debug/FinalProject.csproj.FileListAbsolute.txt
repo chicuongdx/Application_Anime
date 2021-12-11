@@ -295,7 +295,6 @@ D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\bin\Debug
 D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\bin\Debug\System.ValueTuple.xml
 D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\bin\Debug\Interop.WMPLib.dll
 D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\bin\Debug\AxInterop.WMPLib.dll
-D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\obj\Debug\FinalProject.csproj.AssemblyReference.cache
 D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\obj\Debug\Interop.WMPLib.dll
 D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\obj\Debug\AxInterop.WMPLib.dll
 D:\CLOUDX\Courses\Nam3\C#\Final_Project\Application_Anime\FinalProject\obj\Debug\FinalProject.csproj.ResolveComReference.cache
